@@ -3,9 +3,9 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <>
-      <main className="min-h-screen flex justify-center items-center mb-5-xs md:mb-5-md lg:mb-5-lg xl:mb-5-xl">
-        <h1 className="text-4xl md:text-4xl-md lg:text-4xl-lg xl:text-4xl-xl">
-          Welcome to{' '}
+      <main className="min-h-screen flex justify-center items-center mb-5">
+        <h1 className="text-4xl">
+          np Welcome to{' '}
           <a href="https://nextjs.org" className="text-blue-600">
             Next.js!
           </a>
