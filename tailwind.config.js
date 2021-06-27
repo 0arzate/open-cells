@@ -69,6 +69,16 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      colors: {
+        'orange-own': '#D87D4A',
+        'black-own': '#101010',
+        'gray-own': '#F1F1F1',
+        'white-own': '#FAFAFA',
+        'orange-light': '#fbaf85',
+      },
+      fontFamily: {
+        manrope: ['Manrope', 'sans-serif'],
+      },
       fontSize: FONT_SIZES,
       lineHeight: FONT_SIZES,
       spacing: {
