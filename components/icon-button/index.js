@@ -13,6 +13,7 @@ export default function IconButton({
       <i
         className={`${iconName} text-orange-own ml-3`}
         style={{ fontSize: iconSize }}
+        aria-hidden="true"
       />
     </button>
   )
