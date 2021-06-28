@@ -1,6 +1,7 @@
 import Header from 'components/header'
 import Button from 'components/button'
 import IconButton from 'components/icon-button'
+import InputText from 'components/input-text'
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
           <Button solid={true} />
           <Button ghost={true} />
           <IconButton />
+          <InputText fieldLabel="input" placeholder="placeholder" />
         </div>
       </main>
     </>

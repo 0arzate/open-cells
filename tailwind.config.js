@@ -73,8 +73,10 @@ module.exports = {
         'orange-own': '#D87D4A',
         'black-own': '#101010',
         'gray-own': '#F1F1F1',
+        'gray-light': '#CFCFCF',
         'white-own': '#FAFAFA',
         'orange-light': '#fbaf85',
+        'red-own': '#CD2C2C',
       },
       fontFamily: {
         manrope: ['Manrope', 'sans-serif'],
