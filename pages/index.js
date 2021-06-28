@@ -1,4 +1,6 @@
 import Header from 'components/header'
+import Button from 'components/button'
+import IconButton from 'components/icon-button'
 
 export default function Home() {
   return (
@@ -15,6 +17,11 @@ export default function Home() {
               Next.js!
             </a>
           </h1>
+        </div>
+        <div>
+          <Button solid={true} />
+          <Button ghost={true} />
+          <IconButton />
         </div>
       </main>
     </>
