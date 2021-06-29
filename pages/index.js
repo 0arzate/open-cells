@@ -2,12 +2,14 @@ import Header from 'components/header'
 import Button from 'components/button'
 import IconButton from 'components/icon-button'
 import InputText from 'components/input-text'
+import HomeHero from 'components/home-hero'
 
 export default function Home() {
   return (
     <>
       <main className="bg-gray-own min-h-screen max-h-screen font-manrope">
         <Header />
+        <HomeHero />
         <div>
           <h1 className="text-4xl text-black-own">
             Welcome to{' '}
