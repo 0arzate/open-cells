@@ -1,8 +1,6 @@
 import Header from 'components/header'
-import Button from 'components/button'
-import IconButton from 'components/icon-button'
-import InputText from 'components/input-text'
 import HomeHero from 'components/home-hero'
+import HomeShop from 'components/home-shop'
 
 export default function Home() {
   return (
@@ -10,23 +8,7 @@ export default function Home() {
       <main className="bg-gray-own min-h-screen max-h-screen font-manrope">
         <Header />
         <HomeHero />
-        <div>
-          <h1 className="text-4xl text-black-own">
-            Welcome to{' '}
-            <a
-              href="https://nextjs.org"
-              className="text-orange-light font-bold"
-            >
-              Next.js!
-            </a>
-          </h1>
-        </div>
-        <div>
-          <Button solid={true} />
-          <Button ghost={true} />
-          <IconButton />
-          <InputText fieldLabel="input" placeholder="placeholder" />
-        </div>
+        <HomeShop />
       </main>
     </>
   )
