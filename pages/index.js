@@ -1,6 +1,7 @@
 import Header from 'components/header'
 import HomeHero from 'components/home-hero'
 import HomeShop from 'components/home-shop'
+import HomeProduct from 'components/home-product'
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <Header />
         <HomeHero />
         <HomeShop />
+        <HomeProduct />
       </main>
     </>
   )
