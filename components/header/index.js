@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 export default function Header() {
   return (
-    <section className="bg-black-own text-white font-manrope">
-      <div className="flex justify-between w-10/12 mx-auto py-9">
+    <section className="relative z-30 bg-transparent text-white font-manrope bg-gradient-to-r from-black-light via-black-light to-transparent">
+      <div className="flex justify-between w-10/12 mx-auto py-9 border-b border-white border-opacity-20">
         <div>
           <img src="/img/shared/desktop/logo.svg" alt="logo" />
         </div>
