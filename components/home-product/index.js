@@ -31,7 +31,7 @@ export default function HomeProduct() {
               Upgrade to premium speakers that are phenomenally built to deliver
               truly remarkable sound.
             </p>
-            <Button ghost={true} name="See Product" />
+            <Button solid={true} bgColor="bg-black" name="See Product" />
           </div>
         </div>
         <div className="relative mb-12">
