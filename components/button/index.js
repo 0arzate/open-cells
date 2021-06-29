@@ -2,11 +2,12 @@ export default function Button({
   name = 'nombre',
   solid = false,
   ghost = false,
+  bgColor = 'bg-orange-own',
   margin,
 }) {
-  const SOLID = solid ? 'bg-orange-own text-white hover:bg-orange-light' : ''
+  const SOLID = solid ? `${bgColor} text-white hover:bg-opacity-80` : ''
   const GHOST = ghost
-    ? 'bg-white border border-black text-black hover:text-white hover:bg-black'
+    ? 'bg-transparent border border-black text-black hover:text-white hover:bg-black'
     : ''
   return (
     <button
