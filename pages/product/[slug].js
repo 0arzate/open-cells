@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { URL_API } from 'services/ulr'
 import { useRouter } from 'next/dist/client/router'
 
 import Layout from 'components/layout'
@@ -9,12 +10,7 @@ export default function Product() {
   const router = useRouter()
 
   const getProduct = async () => {
-    const url =
-      window.location.origin === 'http://localhost:3000'
-        ? 'http://localhost:3000/api'
-        : 'https://audiophile-rho.vercel.app/api'
-
-    const request = await fetch(url + `/all`)
+    const request = await fetch(URL_API + `/all`)
     const response = await request.json()
     const product = await response.filter(
       (product) => product.slug === router.query.slug
