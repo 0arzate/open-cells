@@ -42,11 +42,17 @@ const WIDTH_HEIGHT = {
 
 const FONT_SIZES = {
   tiny: '.4rem',
+  '2tiny': '.6rem',
   xs: '.8rem',
+  '2xs': '1rem',
   sm: '1.2rem',
+  '2sm': '1.4rem',
   md: '1.6rem',
+  '2md': '1.8rem',
   base: '2rem',
+  '2base': '2.2rem',
   lg: '2.4rem',
+  '2lg': '2.6',
   xl: '2.8rem',
   '2xl': '3.2rem',
   '3xl': '3.6rem',
@@ -69,8 +75,24 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      colors: {
+        'orange-own': '#D87D4A',
+        'black-own': '#101010',
+        'black-light': '#191919',
+        'gray-own': '#F1F1F1',
+        'gray-light': '#CFCFCF',
+        'white-own': '#FAFAFA',
+        'orange-light': '#fbaf85',
+        'red-own': '#CD2C2C',
+      },
+      fontFamily: {
+        manrope: ['Manrope', 'sans-serif'],
+      },
       fontSize: FONT_SIZES,
       lineHeight: FONT_SIZES,
+      letterSpacing: {
+        2.5: '1rem',
+      },
       spacing: {
         0.5: '.2rem',
         1: '.4rem',
