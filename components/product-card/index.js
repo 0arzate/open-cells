@@ -1,15 +1,15 @@
 import Button from 'components/button'
 
-export default function ProductCard({ Product = {} }) {
+export default function ProductCard({ product = {} }) {
   return (
     <article>
       <div>
-        <h2>{Product.name}</h2>
-        <p>{Product.description}</p>
+        <h2>{product.name}</h2>
+        <p>{product.description}</p>
         <Button solid={true} />
       </div>
       <div>
-        <img src={Product.img} alt={Product.name} />
+        <img src={product.img} alt={product.name} />
       </div>
     </article>
   )
