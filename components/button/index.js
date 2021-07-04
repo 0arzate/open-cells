@@ -4,6 +4,7 @@ export default function Button({
   ghost = false,
   bgColor = 'bg-orange-own',
   margin,
+  onClick,
 }) {
   const SOLID = solid ? `${bgColor} text-white hover:bg-opacity-80` : ''
   const GHOST = ghost
@@ -17,6 +18,7 @@ export default function Button({
         maxHeight: '48px',
         margin: margin,
       }}
+      onClick={onClick}
     >
       {name}
     </button>
