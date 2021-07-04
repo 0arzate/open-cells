@@ -4,10 +4,10 @@ import ProductList from 'components/product-list'
 import HomeShop from 'components/home-shop'
 import HomeDescription from 'components/home-description'
 
-export default function Headphones() {
+export default function Earphones() {
   return (
     <Layout>
-      <SectionTitle title="HEADPHONES" />
+      <SectionTitle title="EARPHONES" />
       <ProductList />
       <HomeShop />
       <HomeDescription />

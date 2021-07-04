@@ -1,3 +1,5 @@
+import { useRouter } from 'next/dist/client/router'
+
 import Button from 'components/button'
 
 export default function ProductCard({
@@ -6,9 +8,14 @@ export default function ProductCard({
   reverse = false,
   product = {},
 }) {
+  const router = useRouter()
   const NEW = isNew ? 'inline-block' : 'hidden'
   const DIRECTION = reverse ? 'flex-row-reverse' : ''
   const PADDING_IMAGE = reverse ? 'pr-48' : 'pl-48'
+
+  const changeRoute = () => {
+    router.push(`/product/${product.slug}`)
+  }
 
   return (
     <article
@@ -29,7 +36,7 @@ export default function ProductCard({
         <p className="w-7/12 text-2sm leading-lg text-black opacity-50 mb-10">
           {product.description}
         </p>
-        <Button solid={true} name="See Product" />
+        <Button solid={true} name="See Product" onClick={changeRoute} />
       </div>
       <div className="w-6/12">
         <img
