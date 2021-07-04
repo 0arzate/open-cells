@@ -19,7 +19,7 @@ export default function ProductCard({
     >
       <div className="w-6/12">
         <span
-          className={`${NEW} text-orange-own text-2sm leading-2md tracking-2.5`}
+          className={`${NEW} text-orange-own text-2sm leading-2md tracking-2.5 mb-4`}
         >
           NEW PRODUCT
         </span>
