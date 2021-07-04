@@ -7,7 +7,7 @@ export default function Navbar() {
         <Link href="/#">
           <a className="mr-9">Home</a>
         </Link>
-        <Link href="/#">
+        <Link href="/headphones">
           <a className="mr-9">HEADPHONES</a>
         </Link>
         <Link href="/#">
