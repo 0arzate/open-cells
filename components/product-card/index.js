@@ -1,5 +1,4 @@
 import { useRouter } from 'next/dist/client/router'
-import { URL_IMAGE } from 'services/ulr'
 
 import Button from 'components/button'
 
@@ -9,7 +8,6 @@ export default function ProductCard({
   reverse = false,
   product = {},
 }) {
-  console.log(product)
   const router = useRouter()
   const NEW = isNew ? 'inline-block' : 'hidden'
   const DIRECTION = reverse ? 'flex-row-reverse' : ''
@@ -43,7 +41,7 @@ export default function ProductCard({
       <div className="w-6/12">
         <img
           className={`${PADDING_IMAGE}`}
-          src={URL_IMAGE + product.image.desktop}
+          src={product.image.desktop}
           alt={product.name}
         />
       </div>
