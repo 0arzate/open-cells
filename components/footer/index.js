@@ -1,3 +1,5 @@
+import Navbar from 'components/navbar'
+
 export default function Footer() {
   return (
     <footer className="bg-black pt-18 pb-12">
@@ -14,8 +16,9 @@ export default function Footer() {
             Copyright 2021. All Rights Reserved
           </h3>
         </div>
-        <div className="w-6/12">
-          <ul className="flex justify-end">
+        <div className="w-6/12 text-white flex flex-col items-end">
+          <Navbar />
+          <ul className="flex justify-end mt-40">
             <li className="mr-4">
               <img src="/img/shared/desktop/icon-facebook.svg" alt="facebook" />
             </li>

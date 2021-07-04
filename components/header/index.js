@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Navbar from 'components/navbar'
 
 export default function Header() {
   return (
@@ -7,22 +7,7 @@ export default function Header() {
         <div>
           <img src="/img/shared/desktop/logo.svg" alt="logo" />
         </div>
-        <nav>
-          <ul className="flex uppercase font-bold text-sm leading-10">
-            <Link href="/#">
-              <a className="mr-9">Home</a>
-            </Link>
-            <Link href="/#">
-              <a className="mr-9">HEADPHONES</a>
-            </Link>
-            <Link href="/#">
-              <a className="mr-9">SPEAKERS</a>
-            </Link>
-            <Link href="/#">
-              <a>EARPHONES</a>
-            </Link>
-          </ul>
-        </nav>
+        <Navbar />
         <div>
           <img
             src="/img/shared/desktop/icon-cart.svg"
