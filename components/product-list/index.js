@@ -12,7 +12,7 @@ export default function ProductList() {
     const url =
       window.location.origin === 'http://localhost:3000'
         ? 'http://localhost:3000/api'
-        : 'https://planets-fact.vercel.app/api/'
+        : 'https://audiophile-rho.vercel.app/'
 
     const request = await fetch(url + product)
     const response = await request.json()
