@@ -1,5 +1,7 @@
-import Button from 'components/button'
 import { useRouter } from 'next/dist/client/router'
+import { URL_IMAGE } from 'services/ulr'
+
+import Button from 'components/button'
 
 export default function ProductCard({
   margin = '0px 0px 160px 0px',
@@ -41,7 +43,7 @@ export default function ProductCard({
       <div className="w-6/12">
         <img
           className={`${PADDING_IMAGE}`}
-          src={product.image.desktop}
+          src={URL_IMAGE + product.image.desktop}
           alt={product.name}
         />
       </div>
