@@ -13,13 +13,26 @@ export default function ProductList() {
       window.location.origin === 'http://localhost:3000'
         ? 'http://localhost:3000/api'
         : 'https://planets-fact.vercel.app/api/'
+
     const request = await fetch(url + product)
     const response = await request.json()
+
     setProduct(response)
   }
 
   const renderProduct = () =>
-    product.map((product) => <ProductCard key={product.id} product={product} />)
+    product.map((product, key) => {
+      const reverse = (key + 1) % 2 === 0
+
+      return (
+        <ProductCard
+          key={product.id}
+          product={product}
+          reverse={reverse}
+          isNew={reverse}
+        />
+      )
+    })
 
   useEffect(() => {
     getData()
@@ -27,7 +40,7 @@ export default function ProductList() {
 
   return (
     <section className="py-64">
-      <div>{renderProduct()}</div>
+      <div className="w-10/12 mx-auto">{renderProduct()}</div>
     </section>
   )
 }
