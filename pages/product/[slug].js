@@ -30,7 +30,11 @@ export default function Product() {
       {product ? (
         <section className="w-10/12 mx-auto pt-18 pb-40">
           <div className="mb-14">
-            <IconButton name="Go back" iconName="" />
+            <IconButton
+              name="Go back"
+              iconName=""
+              onClick={() => router.back()}
+            />
           </div>
           {product ? <ProductCard product={product} reverse={true} /> : null}
           <ProductDescription product={product} />
