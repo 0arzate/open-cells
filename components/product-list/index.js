@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/dist/client/router'
+import { URL_API } from 'services/path'
 
 import ProductCard from 'components/product-card'
 
@@ -9,12 +10,7 @@ export default function ProductList() {
 
   const getData = async () => {
     const product = Router.asPath
-    const url =
-      window.location.origin === 'http://localhost:3000'
-        ? 'http://localhost:3000/api'
-        : 'https://audiophile-rho.vercel.app/api'
-
-    const request = await fetch(url + product)
+    const request = await fetch(URL_API + product)
     const response = await request.json()
 
     setProduct(response)
