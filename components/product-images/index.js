@@ -3,7 +3,7 @@ import { URL_IMAGE } from 'services/path'
 export default function ProductImages({ product = {} }) {
   return (
     <section
-      className="grid grid-cols-2 grid-rows-2 gap-7 max-w-max max-h-min mt-64 mb-64 mx-auto"
+      className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-2 grid-rows-2 gap-7 max-w-max max-h-min mt-64 mb-64"
       style={{ maxHeight: '592px' }}
     >
       <div className="bg-blue-800 row-start-1 row-end-2">
@@ -28,7 +28,7 @@ export default function ProductImages({ product = {} }) {
       </div>
       <div className="bg-indigo-400 row-start-1 row-end-3">
         <img
-          className="object-cover"
+          className="w-full h-full object-cover object-top"
           src={URL_IMAGE + product.gallery.third.desktop}
           alt={product.name}
         />

@@ -20,7 +20,7 @@ export default function ProductRandom() {
 
   return (
     <section>
-      <div className="flex w-10/12 mx-auto">
+      <div className="flex w-10/12 2xl:w-8/12 mx-auto">
         {products.map((product, key) => {
           if ((key + 1) % 2 === 0) {
             // HACER ALEATORIO QUE PRODUCTOS SE MUESTRAN AQUI

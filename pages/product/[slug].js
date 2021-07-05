@@ -32,7 +32,7 @@ export default function Product() {
     <Layout>
       {product ? (
         <>
-          <div className="w-10/12 mx-auto">
+          <div className="w-10/12 2xl:w-8/12 mx-auto">
             <IconButton
               name="Go back"
               iconName=""

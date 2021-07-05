@@ -1,7 +1,7 @@
 export default function HomeDescription() {
   return (
     <section className="bg-white pb-80">
-      <div className="w-10/12 mx-auto flex items-center">
+      <div className="w-10/12 2xl:w-8/12 mx-auto flex items-center">
         <div className="w-6/12">
           <h2 className="uppercase mb-8 text-4xl leading-5xl font-bold">
             Bringing you the

@@ -7,7 +7,7 @@ export default function HomeProduct() {
 
   return (
     <section className="bg-white pb-80">
-      <div className="w-10/12 mx-auto">
+      <div className="w-10/12 2xl:w-8/12 mx-auto">
         <div
           className="flex bg-orange-own text-white mb-12"
           style={{

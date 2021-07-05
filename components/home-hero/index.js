@@ -9,7 +9,7 @@ export default function HomeHero() {
       className="bg-black-light text-white"
       style={{ minHeight: '632px' }}
     >
-      <div className="w-10/12 mx-auto flex items-center pb-60 pt-48">
+      <div className="w-10/12 2xl:w-8/12 mx-auto flex items-center pb-60 pt-48">
         <div className="relative z-30 w-6/12">
           <h3 className="font-normal text-2sm leading-base mb-6 opacity-50 tracking-2.5">
             NEW PRODUCT

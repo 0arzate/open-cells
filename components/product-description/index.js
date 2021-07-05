@@ -1,7 +1,7 @@
 export default function ProductDescription({ product }) {
   return (
     <section>
-      <div className="w-10/12 mx-auto flex justify-between">
+      <div className="w-10/12 2xl:w-8/12 mx-auto flex justify-between">
         <div className="w-7/12">
           <h2 className="uppercase mb-8 font-bold text-2xl leading-3xl">
             FEATURES

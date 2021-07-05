@@ -36,7 +36,7 @@ export default function ProductList() {
 
   return (
     <section className="pt-64">
-      <div className="w-10/12 mx-auto">{renderProduct()}</div>
+      <div className="w-10/12 2xl:w-8/12 mx-auto">{renderProduct()}</div>
     </section>
   )
 }
