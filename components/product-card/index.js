@@ -25,7 +25,7 @@ export default function ProductCard({
         margin: margin,
       }}
     >
-      <div className="w-6/12">
+      <div className="w-7/12">
         <span
           className={`${NEW} text-orange-own text-2sm leading-2md tracking-2.5 mb-4`}
         >

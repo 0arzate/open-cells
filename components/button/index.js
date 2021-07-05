@@ -12,7 +12,7 @@ export default function Button({
     : ''
   return (
     <button
-      className={`${SOLID} ${GHOST} uppercase text-sm leading-7 font-bold py-4 text-center mb-4`}
+      className={`${SOLID} ${GHOST} uppercase text-sm leading-7 font-bold py-4 text-center mb-4 transition-colors`}
       style={{
         minWidth: '160px',
         maxHeight: '48px',

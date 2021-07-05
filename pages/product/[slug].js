@@ -2,8 +2,14 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/dist/client/router'
 import { URL_API } from 'services/path'
 
+import IconButton from 'components/icon-button'
 import Layout from 'components/layout'
 import ProductCard from 'components/product-card'
+import ProductDescription from 'components/product-description'
+import ProductImages from 'components/product-images'
+import ProductRandom from 'components/product-random'
+import HomeShop from 'components/home-shop'
+import HomeDescription from 'components/home-description'
 
 export default function Product() {
   const [product, setProduct] = useState(false)
@@ -24,9 +30,24 @@ export default function Product() {
 
   return (
     <Layout>
-      <section className="w-10/12 mx-auto">
-        {product ? <ProductCard product={product} reverse={true} /> : null}
-      </section>
+      {product ? (
+        <>
+          <div className="w-10/12 2xl:w-8/12 mx-auto">
+            <IconButton
+              name="Go back"
+              iconName=""
+              onClick={() => router.back()}
+              margin="72px 0px 72px 0px"
+            />
+            {product ? <ProductCard product={product} reverse={true} /> : null}
+          </div>
+          <ProductDescription product={product} />
+          <ProductImages product={product} />
+          <ProductRandom />
+          <HomeShop />
+          <HomeDescription />
+        </>
+      ) : null}
     </Layout>
   )
 }

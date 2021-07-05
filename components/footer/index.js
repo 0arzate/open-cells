@@ -3,7 +3,7 @@ import Navbar from 'components/navbar'
 export default function Footer() {
   return (
     <footer className="bg-black pt-18 pb-12">
-      <div className="w-10/12 mx-auto flex">
+      <div className="w-10/12 2xl:w-8/12 mx-auto flex">
         <div className="w-6/12 pr-30 text-2sm leading-lg">
           <img className="mb-9" src="/img/shared/desktop/logo.svg" alt="logo" />
           <p className="mb-20 font-extralight text-white text-opacity-50">
