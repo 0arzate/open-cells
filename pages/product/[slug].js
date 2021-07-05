@@ -7,6 +7,7 @@ import Layout from 'components/layout'
 import ProductCard from 'components/product-card'
 import ProductDescription from 'components/product-description'
 import ProductImages from 'components/product-images'
+import ProductRandom from 'components/product-random'
 
 export default function Product() {
   const [product, setProduct] = useState(false)
@@ -39,6 +40,7 @@ export default function Product() {
           {product ? <ProductCard product={product} reverse={true} /> : null}
           <ProductDescription product={product} />
           <ProductImages product={product} />
+          <ProductRandom />
         </section>
       ) : null}
     </Layout>
