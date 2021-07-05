@@ -1,7 +1,11 @@
+import { useRouter } from 'next/dist/client/router'
+
 import Link from 'next/link'
 import IconButton from 'components/icon-button'
 
 export default function HomeShop() {
+  const router = useRouter()
+
   return (
     <section className="bg-white pt-48 pb-64">
       <div className="flex justify-center w-10/12 mx-auto text-black font-bold text-2md leading-lg">
@@ -15,7 +19,10 @@ export default function HomeShop() {
             <Link href="#">
               <a className="block uppercase mb-3.5">HEADPHONES</a>
             </Link>
-            <IconButton name="Shop" />
+            <IconButton
+              name="Shop"
+              onClick={() => router.push('/headphones')}
+            />
           </div>
         </div>
         <div className="flex flex-col justify-between mr-8 text-center bg-gradient-to-b via-gray-own from-white to-gray-own pb-7">
@@ -28,7 +35,7 @@ export default function HomeShop() {
             <Link href="#">
               <a className="block uppercase mb-3.5">SPEAKERS</a>
             </Link>
-            <IconButton name="Shop" />
+            <IconButton name="Shop" onClick={() => router.push('/speakers')} />
           </div>
         </div>
         <div className="flex flex-col justify-between text-center bg-gradient-to-b via-gray-own from-white to-gray-own pb-7">
@@ -41,7 +48,7 @@ export default function HomeShop() {
             <Link href="#">
               <a className="block uppercase mb-3.5">EARPHONES</a>
             </Link>
-            <IconButton name="Shop" />
+            <IconButton name="Shop" onClick={() => router.push('/earphones')} />
           </div>
         </div>
       </div>

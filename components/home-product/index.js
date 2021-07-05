@@ -1,6 +1,10 @@
+import { useRouter } from 'next/dist/client/router'
+
 import Button from 'components/button'
 
 export default function HomeProduct() {
+  const router = useRouter()
+
   return (
     <section className="bg-white pb-80">
       <div className="w-10/12 mx-auto">
@@ -31,7 +35,12 @@ export default function HomeProduct() {
               Upgrade to premium speakers that are phenomenally built to deliver
               truly remarkable sound.
             </p>
-            <Button solid={true} bgColor="bg-black" name="See Product" />
+            <Button
+              solid={true}
+              bgColor="bg-black"
+              name="See Product"
+              onClick={() => router.push('/product/zx9-speaker')}
+            />
           </div>
         </div>
         <div className="relative mb-12">
@@ -39,7 +48,11 @@ export default function HomeProduct() {
             <h2 className="font-bold text-xl leading-3xl tracking-widest mb-8">
               ZX7 SPEAKER
             </h2>
-            <Button ghost={true} name="See Product" />
+            <Button
+              ghost={true}
+              name="See Product"
+              onClick={() => router.push('/product/zx7-speaker')}
+            />
           </div>
           <img
             className="w-full"
@@ -60,7 +73,11 @@ export default function HomeProduct() {
               <h2 className="font-bold text-xl leading-3xl tracking-widest mb-8">
                 YX1 EARPHONES
               </h2>
-              <Button ghost={true} name="See Product" />
+              <Button
+                ghost={true}
+                name="See Product"
+                onClick={() => router.push('/product/yx1-earphones')}
+              />
             </div>
           </div>
         </div>

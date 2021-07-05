@@ -1,6 +1,9 @@
+import { useRouter } from 'next/dist/client/router'
+
 import Button from 'components/button'
 
 export default function HomeHero() {
+  const router = useRouter()
   return (
     <section
       className="bg-black-light text-white"
@@ -18,7 +21,11 @@ export default function HomeHero() {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </h4>
-          <Button solid={true} name="See Product" />
+          <Button
+            solid={true}
+            name="See Product"
+            onClick={() => router.push('/product/xx99-mark-two-headphones')}
+          />
         </div>
         <img
           className="absolute top-0 bottom-0 right-0"
