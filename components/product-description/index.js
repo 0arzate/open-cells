@@ -1,4 +1,4 @@
-export default function ProductDescription({ product }) {
+export default function ProductDescription({ product = {} }) {
   return (
     <section>
       <div className="w-10/12 2xl:w-8/12 mx-auto flex justify-between">
@@ -18,7 +18,7 @@ export default function ProductDescription({ product }) {
             in the box
           </h2>
           <ul>
-            {product.includes.map((include) => (
+            {product.includes?.map((include) => (
               <li
                 className="text-black mb-2 text-opacity-50 text-2sm leading-lg"
                 key={include.item}

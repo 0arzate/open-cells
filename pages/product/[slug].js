@@ -12,7 +12,7 @@ import HomeShop from 'components/home-shop'
 import HomeDescription from 'components/home-description'
 
 export default function Product() {
-  const [product, setProduct] = useState(false)
+  const [product, setProduct] = useState({})
   const router = useRouter()
 
   const getProduct = async () => {
@@ -30,24 +30,20 @@ export default function Product() {
 
   return (
     <Layout>
-      {product ? (
-        <>
-          <div className="w-10/12 2xl:w-8/12 mx-auto">
-            <IconButton
-              name="Go back"
-              iconName=""
-              onClick={() => router.back()}
-              margin="72px 0px 72px 0px"
-            />
-            {product ? <ProductCard product={product} reverse={true} /> : null}
-          </div>
-          <ProductDescription product={product} />
-          <ProductImages product={product} />
-          <ProductRandom />
-          <HomeShop />
-          <HomeDescription />
-        </>
-      ) : null}
+      <div className="w-10/12 2xl:w-8/12 mx-auto">
+        <IconButton
+          name="Go back"
+          iconName=""
+          onClick={() => router.back()}
+          margin="72px 0px 72px 0px"
+        />
+        <ProductCard product={product} reverse={true} addToCard={true} />
+      </div>
+      <ProductDescription product={product} />
+      <ProductImages product={product} />
+      <ProductRandom />
+      <HomeShop />
+      <HomeDescription />
     </Layout>
   )
 }

@@ -2,11 +2,13 @@ import { useRouter } from 'next/dist/client/router'
 import { URL_IMAGE } from 'services/path'
 
 import Button from 'components/button'
+import InputAmount from 'components/inputAmount'
 
 export default function ProductCard({
   margin = '0px 0px 160px 0px',
   isNew = false,
   reverse = false,
+  addToCard = false,
   product = {},
 }) {
   const router = useRouter()
@@ -37,12 +39,18 @@ export default function ProductCard({
         <p className="w-7/12 text-2sm leading-lg text-black opacity-50 mb-10">
           {product.description}
         </p>
-        <Button solid={true} name="See Product" onClick={changeRoute} />
+        <div className={addToCard ? 'hidden' : 'block'}>
+          <Button solid={true} name="See Product" onClick={changeRoute} />
+        </div>
+        <div className={addToCard ? 'flex' : 'hidden'}>
+          <InputAmount />
+          <Button solid={true} name="ADD TO CART" onClick={changeRoute} />
+        </div>
       </div>
       <div className="w-6/12">
         <img
           className={`${PADDING_IMAGE}`}
-          src={URL_IMAGE + product.image.desktop}
+          src={URL_IMAGE + product.image?.desktop}
           alt={product.name}
         />
       </div>

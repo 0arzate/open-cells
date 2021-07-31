@@ -12,7 +12,7 @@ export default function ProductImages({ product = {} }) {
           style={{
             maxHeight: '100%',
           }}
-          src={URL_IMAGE + product.gallery.first.desktop}
+          src={URL_IMAGE + product.gallery?.first.desktop}
           alt={product.name}
         />
       </div>
@@ -22,14 +22,14 @@ export default function ProductImages({ product = {} }) {
           style={{
             maxHeight: '100%',
           }}
-          src={URL_IMAGE + product.gallery.second.desktop}
+          src={URL_IMAGE + product.gallery?.second.desktop}
           alt={product.name}
         />
       </div>
       <div className="bg-indigo-400 row-start-1 row-end-3">
         <img
           className="w-full h-full object-cover object-top"
-          src={URL_IMAGE + product.gallery.third.desktop}
+          src={URL_IMAGE + product.gallery?.third.desktop}
           alt={product.name}
         />
       </div>
