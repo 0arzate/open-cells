@@ -2,7 +2,7 @@ import { useRouter } from 'next/dist/client/router'
 import { URL_IMAGE } from 'services/path'
 
 import Button from 'components/button'
-import InputAmount from 'components/inputAmount'
+import InputAmount from 'components/input-amount'
 
 export default function ProductCard({
   margin = '0px 0px 160px 0px',
