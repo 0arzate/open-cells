@@ -1,0 +1,7 @@
+.bg-product-image {
+  background-image: url('/img/home/desktop/pattern-circles.svg');
+  background-size: 60%;
+  background-position: -20% -30px;
+  background-repeat: no-repeat;
+  max-height: 560px;
+}

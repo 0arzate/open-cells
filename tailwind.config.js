@@ -1,10 +1,3 @@
-// for it to work add in global styles in the html "font-size: 62.5%"
-// example: html { font-size: 62.5%; }
-
-// 10px = 1rem // 16px = 1.6rem
-
-// sizes in min and max width - height
-
 const WIDTH_HEIGHT = {
   min: 'min-content',
   max: 'max-content',
@@ -38,33 +31,6 @@ const WIDTH_HEIGHT = {
   '11/12': '91.666667%',
 }
 
-// sizes in font-size and leanding
-
-const FONT_SIZES = {
-  tiny: '.4rem',
-  '2tiny': '.6rem',
-  xs: '.8rem',
-  '2xs': '1rem',
-  sm: '1.2rem',
-  '2sm': '1.4rem',
-  md: '1.6rem',
-  '2md': '1.8rem',
-  base: '2rem',
-  '2base': '2.2rem',
-  lg: '2.4rem',
-  '2lg': '2.6',
-  xl: '2.8rem',
-  '2xl': '3.2rem',
-  '3xl': '3.6rem',
-  '4xl': '4rem',
-  '5xl': '4.4rem',
-  '6xl': '4.8rem',
-  '7xl': '5.2rem',
-  '8xl': '5.6rem',
-  '9xl': '6rem',
-  '10xl': '6.4rem',
-}
-
 module.exports = {
   purge: [
     './public/index.html',
@@ -87,39 +53,6 @@ module.exports = {
       },
       fontFamily: {
         manrope: ['Manrope', 'sans-serif'],
-      },
-      fontSize: FONT_SIZES,
-      lineHeight: FONT_SIZES,
-      letterSpacing: {
-        2.5: '1rem',
-      },
-      spacing: {
-        0.5: '.2rem',
-        1: '.4rem',
-        1.5: '.6rem',
-        2: '.8rem',
-        2.5: '1rem',
-        3: '1.2rem',
-        3.5: '1.4rem',
-        4: '1.6rem',
-        4.5: '1.8rem',
-        5: '2rem',
-        6: '2.4rem',
-        7: '2.8rem',
-        8: '3.2rem',
-        9: '3.6rem',
-        10: '4rem',
-        11: '4.4rem',
-        12: '4.8rem',
-        14: '5.6rem',
-        16: '6.4rem',
-        18: '7.2rem',
-        20: '8rem',
-        22: '8.8rem',
-        24: '9.6rem',
-        26: '10.4rem',
-        28: '11.2rem',
-        30: '12rem',
       },
       height: {
         ...WIDTH_HEIGHT,

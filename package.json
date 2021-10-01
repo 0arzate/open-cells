@@ -1,6 +1,6 @@
 {
   "name": "audiophile",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,7 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "next": "^11.0.1",
+    "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
@@ -27,9 +27,28 @@
     "husky": "6.0.0",
     "lint-staged": "11.0.0",
     "postcss": "8.2.15",
-    "tailwindcss": "^2.2.4"
+    "tailwindcss": "2.2.4"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "./src/pages/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArzateCompany/audiophile.git"
+  },
+  "keywords": [
+    "react",
+    "nextjs",
+    "javascript",
+    "frontendmentor",
+    "challenge"
+  ],
+  "author": "Osvaldo Arzate Santiago <osvarz.new@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArzateCompany/audiophile/issues"
+  },
+  "homepage": "https://github.com/ArzateCompany/audiophile#readme"
 }
