@@ -6,10 +6,10 @@ import ProductCard from '@components/ProductCard'
 
 export default function ProductList() {
   const [product, setProduct] = useState([])
-  const Router = useRouter()
+  const { query } = useRouter()
 
   const getData = async () => {
-    const product = Router.asPath
+    const product = query.id
     const request = await fetch(URL_API + product)
     const response = await request.json()
 
@@ -32,7 +32,7 @@ export default function ProductList() {
 
   useEffect(() => {
     getData()
-  }, [])
+  }, [query])
 
   return (
     <section className="pt-40">

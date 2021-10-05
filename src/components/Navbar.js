@@ -21,28 +21,28 @@ export default function Navbar() {
             Home
           </a>
         </Link>
-        <Link href="/headphones">
+        <Link href="/catalogue/headphones">
           <a
             className={`${isActive(
-              '/headphones'
+              '/catalogue/headphones'
             )} mr-8 hover:text-orange-own transition-colors`}
           >
             HEADPHONES
           </a>
         </Link>
-        <Link href="/speakers">
+        <Link href="/catalogue/speakers">
           <a
             className={`${isActive(
-              '/speakers'
+              '/catalogue/speakers'
             )} mr-8 hover:text-orange-own transition-colors`}
           >
             SPEAKERS
           </a>
         </Link>
-        <Link href="/earphones">
+        <Link href="/catalogue/earphones">
           <a
             className={`${isActive(
-              '/earphones'
+              '/catalogue/earphones'
             )} hover:text-orange-own transition-colors`}
           >
             EARPHONES
