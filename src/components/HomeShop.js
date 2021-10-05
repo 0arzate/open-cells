@@ -1,7 +1,6 @@
 import { useRouter } from 'next/dist/client/router'
 import { URL_IMAGE } from '../services/path'
 
-import Link from 'next/link'
 import IconButton from '@components/IconButton'
 
 export default function HomeShop() {
@@ -17,12 +16,10 @@ export default function HomeShop() {
             alt="headphones shop"
           />
           <div>
-            <Link href="#">
-              <a className="block uppercase mb-3.5">HEADPHONES</a>
-            </Link>
+            <p className="block uppercase mb-3.5">HEADPHONES</p>
             <IconButton
               name="Shop"
-              onClick={() => router.push('/headphones')}
+              onClick={() => router.push('/catalogue/headphones')}
             />
           </div>
         </div>
@@ -33,10 +30,11 @@ export default function HomeShop() {
             alt="speakers shop"
           />
           <div>
-            <Link href="#">
-              <a className="block uppercase mb-3.5">SPEAKERS</a>
-            </Link>
-            <IconButton name="Shop" onClick={() => router.push('/speakers')} />
+            <p className="block uppercase mb-3.5">SPEAKERS</p>
+            <IconButton
+              name="Shop"
+              onClick={() => router.push('/catalogue/speakers')}
+            />
           </div>
         </div>
         <div className="flex flex-col justify-between text-center bg-gradient-to-b via-gray-own from-white to-gray-own pb-7">
@@ -46,10 +44,11 @@ export default function HomeShop() {
             alt="earphones shop"
           />
           <div>
-            <Link href="#">
-              <a className="block uppercase mb-3.5">EARPHONES</a>
-            </Link>
-            <IconButton name="Shop" onClick={() => router.push('/earphones')} />
+            <p className="block uppercase mb-3.5">EARPHONES</p>
+            <IconButton
+              name="Shop"
+              onClick={() => router.push('/catalogue/earphones')}
+            />
           </div>
         </div>
       </div>
