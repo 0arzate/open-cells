@@ -1,25 +1,12 @@
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/dist/client/router'
-import { URL_API } from '../services/path'
-
 import ProductCard from '@components/ProductCard'
+import useList from '@hooks/useList'
 
 export default function ProductList() {
-  const [product, setProduct] = useState([])
-  const { query } = useRouter()
-
-  const getData = async () => {
-    const product = query.id
-    const request = await fetch(URL_API + product)
-    const response = await request.json()
-
-    setProduct(response)
-  }
+  const { data } = useList()
 
   const renderProduct = () =>
-    product.map((product, key) => {
+    data.map((product, key) => {
       const reverse = (key + 1) % 2 === 0
-
       return (
         <ProductCard
           key={product.id}
@@ -29,10 +16,6 @@ export default function ProductList() {
         />
       )
     })
-
-  useEffect(() => {
-    getData()
-  }, [query])
 
   return (
     <section className="pt-40">
