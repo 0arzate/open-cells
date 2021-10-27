@@ -4,7 +4,7 @@ import { URL_IMAGE } from '../services/path'
 import IconButton from '@components/IconButton'
 
 export default function HomeShop() {
-  const router = useRouter()
+  const { push } = useRouter()
 
   return (
     <section className="bg-white pt-32 pb-40">
@@ -19,7 +19,7 @@ export default function HomeShop() {
             <p className="block uppercase mb-3.5">HEADPHONES</p>
             <IconButton
               name="Shop"
-              onClick={() => router.push('/catalogue/headphones')}
+              onClick={() => push('/catalogue/headphones')}
             />
           </div>
         </div>
@@ -33,7 +33,7 @@ export default function HomeShop() {
             <p className="block uppercase mb-3.5">SPEAKERS</p>
             <IconButton
               name="Shop"
-              onClick={() => router.push('/catalogue/speakers')}
+              onClick={() => push('/catalogue/speakers')}
             />
           </div>
         </div>
@@ -47,7 +47,7 @@ export default function HomeShop() {
             <p className="block uppercase mb-3.5">EARPHONES</p>
             <IconButton
               name="Shop"
-              onClick={() => router.push('/catalogue/earphones')}
+              onClick={() => push('/catalogue/earphones')}
             />
           </div>
         </div>

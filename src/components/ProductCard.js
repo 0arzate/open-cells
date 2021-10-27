@@ -10,13 +10,13 @@ export default function ProductCard({
   addToCard = false,
   product = {},
 }) {
-  const router = useRouter()
+  const { push } = useRouter()
   const NEW = isNew ? 'inline-block' : 'hidden'
   const DIRECTION = reverse ? 'flex-row-reverse' : ''
   const PADDING_IMAGE = reverse ? 'pr-32' : 'pl-32'
 
   const changeRoute = () => {
-    router.push(`/product/${product.slug}`)
+    push(`/product/${product.slug}`)
   }
 
   return (

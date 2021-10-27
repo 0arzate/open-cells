@@ -14,7 +14,7 @@ export default function useRequest() {
     }
 
     try {
-      const request = await fetch(URL_API + product)
+      const request = await fetch(URL_API + 'products/' + product)
       const response = await request.json()
 
       if (response) {

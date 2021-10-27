@@ -13,20 +13,19 @@ import HomeDescription from '@components/HomeDescription'
 
 export default function Product() {
   const [product, setProduct] = useState({})
-  const router = useRouter()
+  const { query, back } = useRouter()
 
   const getProduct = async () => {
-    const request = await fetch(URL_API + `/all`)
-    const response = await request.json()
-    const product = await response.filter(
-      (product) => product.slug === router.query.slug
-    )
-    setProduct(product[0])
+    if (query.slug) {
+      const request = await fetch(URL_API + `product/${query.slug}`)
+      const response = await request.json()
+      setProduct(response)
+    }
   }
 
   useEffect(() => {
     getProduct()
-  }, [router])
+  }, [query.slug])
 
   return (
     <Layout>
@@ -34,7 +33,7 @@ export default function Product() {
         <IconButton
           name="Go back"
           iconName=""
-          onClick={() => router.back()}
+          onClick={() => back()}
           margin="72px 0px 72px 0px"
         />
         <ProductCard product={product} reverse={true} addToCard={true} />
