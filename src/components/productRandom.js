@@ -5,11 +5,11 @@ import { useRouter } from 'next/dist/client/router'
 import Button from '@components/Button'
 
 export default function ProductRandom() {
-  const router = useRouter()
+  const { push } = useRouter()
   const [products, setProducts] = useState([])
 
   const getData = async () => {
-    const response = await fetch(URL_API + '/all')
+    const response = await fetch(URL_API + 'products/all')
     const data = await response.json()
     setProducts(data)
   }
@@ -24,7 +24,7 @@ export default function ProductRandom() {
         {products.map((product, key) => {
           if ((key + 1) % 2 === 0) {
             return (
-              <div className="flex flex-col items-center">
+              <div key={product.id} className="flex flex-col items-center">
                 <img
                   className="w-11/12"
                   src={URL_IMAGE + product.image.desktop}
@@ -34,7 +34,7 @@ export default function ProductRandom() {
                 <Button
                   name="See Product"
                   solid={true}
-                  onClick={() => router.push(`/product/${product.slug}`)}
+                  onClick={() => push(`/product/${product.slug}`)}
                 />
               </div>
             )
