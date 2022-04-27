@@ -14,7 +14,7 @@ export default function InputAmount({ handleChange }) {
   }
 
   return (
-    <div className="h-12 max-h-max flex items-center bg-gray-own max-w-max p-4 mr-8">
+    <div className="h-12 max-h-max flex items-center bg-gray-own max-w-max p-4">
       <IconButton
         iconName="fas fa-minus"
         onlyIcon={true}
