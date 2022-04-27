@@ -34,7 +34,7 @@ export default function ProductCard({
         <div className={addToCard ? 'hidden' : 'block'}>
           <Button solid={true} name="See Product" onClick={changeRoute} />
         </div>
-        <div className={addToCard ? 'flex' : 'hidden'}>
+        <div className={addToCard ? 'flex gap-8' : 'hidden'}>
           <InputAmount />
           <Button solid={true} name="ADD TO CART" onClick={changeRoute} />
         </div>

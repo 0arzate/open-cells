@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
 import Modal from '@components/Modal'
+import Cart from '@components/Cart'
 
 export default function Layout({ children }) {
   const [openModal, setOpenModal] = useState(false)
@@ -16,7 +17,7 @@ export default function Layout({ children }) {
       {children}
       <Footer />
       <Modal open={openModal} setOpen={() => setOpenModal(!openModal)}>
-        <p>Modal</p>
+        <Cart />
       </Modal>
     </section>
   )
