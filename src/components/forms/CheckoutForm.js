@@ -8,7 +8,7 @@ const paymentMethods = [
 
 export default function CheckoutForm() {
   return (
-    <form className="text-black p-12 py-14 bg-white">
+    <form className="text-black min-w-[730px] p-12 py-14 bg-white w-full">
       <h2 className="mb-10 text-3xl font-bold">CHECKOUT</h2>
       <h3 className="text-orange-own text-sm mb-4 font-bold"></h3>
       <div className="grid grid-cols-2 gap-y-6 gap-x-4 mb-14">

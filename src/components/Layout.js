@@ -9,9 +9,7 @@ export default function Layout({ children, bgColor = 'bg-transparent' }) {
   const [openModal, setOpenModal] = useState(false)
 
   return (
-    <section
-      className={`${bgColor} min-h-screen max-h-screen font-manrope overflow-y-auto`}
-    >
+    <section className={`${bgColor} min-h-screen font-manrope`}>
       <Header
         setOpenModal={() => setOpenModal(!openModal)}
         openModal={setOpenModal}
