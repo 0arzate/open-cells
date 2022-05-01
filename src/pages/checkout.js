@@ -1,11 +1,15 @@
+import { useState } from 'react'
 import { useRouter } from 'next/router'
 
 import CheckoutForm from '@components/forms/CheckoutForm'
 import IconButton from '@components/IconButton'
 import Layout from '@components/Layout'
 import Summary from '@components/Summary'
+import Modal from '@components/Modal'
+import CheckoutSuccess from '@components/CheckoutSuccess'
 
 export default function Checkout() {
+  const [open, setOpen] = useState(false)
   const { back } = useRouter()
 
   return (
@@ -19,9 +23,12 @@ export default function Checkout() {
         />
         <div className="grid grid-cols-[68%_32%] gap-8">
           <CheckoutForm />
-          <Summary />
+          <Summary handleContinue={() => setOpen(true)} />
         </div>
       </div>
+      <Modal open={open}>
+        <CheckoutSuccess />
+      </Modal>
     </Layout>
   )
 }

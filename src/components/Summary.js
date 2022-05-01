@@ -1,7 +1,7 @@
 import Button from './Button'
 import ProductCart from './ProductCart'
 
-export default function Summary() {
+export default function Summary({ handleContinue }) {
   return (
     <div className="p-8 min-w-[350px] bg-white h-min">
       <h2 className="font-bold text-lg">summary</h2>
@@ -28,7 +28,7 @@ export default function Summary() {
         <p className="text-black text-opacity-50">GRAND TOTAL</p>
         <p className="text-lg font-bold text-orange-own">{`$ 5,446`}</p>
       </div>
-      <Button solid full>
+      <Button solid full onClick={handleContinue}>
         CONTINUE
       </Button>
     </div>
