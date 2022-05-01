@@ -12,7 +12,7 @@ export default function Modal({ open, children }) {
   return node
     ? createPortal(
         <div
-          className={`${isOpen} z-20 min-h-screen bg-black bg-opacity-50 fixed top-0 left-0 right-0 bottom-0`}
+          className={`${isOpen} z-20 min-h-screen pt-[72px] flex items-center justify-center bg-black bg-opacity-50 fixed top-0 left-0 right-0 bottom-0`}
         >
           {children}
         </div>,
