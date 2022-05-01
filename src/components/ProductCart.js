@@ -1,6 +1,6 @@
 import InputAmount from '@components/InputAmount'
 
-export default function ProductCart() {
+export default function ProductCart({ read }) {
   return (
     <div className="h-[65px] flex items-center">
       <img
@@ -13,7 +13,11 @@ export default function ProductCart() {
           <p className="font-bold mb-1">XX99 MK II</p>
           <p className="text-opacity-50">{`$ 2,999`}</p>
         </div>
-        <InputAmount />
+        {read ? (
+          <p className="font-bold text-opacity-50 text-black">{`x1`}</p>
+        ) : (
+          <InputAmount />
+        )}
       </div>
     </div>
   )

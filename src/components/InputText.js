@@ -22,7 +22,7 @@ export default function InputText({
   return (
     <div
       className="flex flex-col"
-      style={{ maxWidth: '309px', margin: margin }}
+      style={{ minWidth: '309px', margin: margin }}
     >
       <label
         className={`${ERROR} inline-flex justify-between items-center font-bold text-sm mb-2`}
