@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/dist/client/router'
-import { URL_API } from 'services/path'
 
 import IconButton from '@components/IconButton'
 import Layout from '@components/Layout'
@@ -10,6 +9,7 @@ import ProductImages from '@components/ProductImages'
 import ProductRandom from '@components/productRandom'
 import HomeShop from '@components/HomeShop'
 import HomeDescription from '@components/HomeDescription'
+import { URL } from 'utils/constants'
 
 export default function Product() {
   const [product, setProduct] = useState({})
@@ -17,9 +17,9 @@ export default function Product() {
 
   const getProduct = async () => {
     if (query.slug) {
-      const request = await fetch(URL_API + `product/${query.slug}`)
+      const request = await fetch(URL + `products/id/${query.slug}`)
       const response = await request.json()
-      setProduct(response)
+      setProduct(response.data[0])
     }
   }
 

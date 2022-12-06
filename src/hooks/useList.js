@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import { URL_API } from '@services/path'
+import { URL } from 'utils/constants'
 
 export default function useRequest() {
-  const [data, setData] = useState([])
+  const [products, setProducts] = useState([])
   const { query, push } = useRouter()
 
   const getData = async () => {
@@ -14,14 +14,11 @@ export default function useRequest() {
     }
 
     try {
-      const request = await fetch(URL_API + 'products/' + product)
+      const request = await fetch(URL + 'products/' + product)
       const response = await request.json()
 
-      if (response) {
-        setData(response)
-      } else {
-        console.error('Error en request (response)')
-        push('/')
+      if (response.success) {
+        setProducts(response.data)
       }
     } catch (error) {
       console.error('Error en el request (fetch):', error.message)
@@ -33,5 +30,5 @@ export default function useRequest() {
     getData()
   }, [query])
 
-  return { data }
+  return { products }
 }
