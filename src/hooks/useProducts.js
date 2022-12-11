@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { URL_API } from '@services/path'
 
-export default function useRequest() {
-  const [data, setData] = useState([])
+export default function useProducts() {
+  const [products, setProducts] = useState([])
   const { query, push } = useRouter()
 
-  const getData = async () => {
+  const getproducts = async () => {
     const product = query.id
 
     if (!product) {
@@ -18,7 +18,7 @@ export default function useRequest() {
       const response = await request.json()
 
       if (response) {
-        setData(response)
+        setProducts(response)
       } else {
         console.error('Error en request (response)')
         push('/')
@@ -30,8 +30,8 @@ export default function useRequest() {
   }
 
   useEffect(() => {
-    getData()
+    getproducts()
   }, [query])
 
-  return { data }
+  return { products }
 }
