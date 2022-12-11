@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Button from './Button'
 
 export default function CheckoutSuccess() {
@@ -34,11 +33,9 @@ export default function CheckoutSuccess() {
           <p className="text-lg font-bold">$ 5,446</p>
         </div>
       </div>
-      <Link href="/">
-        <Button full solid>
-          BACK TO HOME
-        </Button>
-      </Link>
+      <Button full solid href="/">
+        BACK TO HOME
+      </Button>
     </div>
   )
 }
