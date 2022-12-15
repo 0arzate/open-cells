@@ -2,10 +2,10 @@ import ProductCard from '@components/ProductCard'
 import useList from '@hooks/useList'
 
 export default function ProductList() {
-  const { data } = useList()
+  const { products } = useList()
 
   const renderProduct = () =>
-    data.map((product, key) => {
+    products.map((product, key) => {
       const reverse = (key + 1) % 2 === 0
       return (
         <ProductCard
