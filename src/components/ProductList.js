@@ -1,8 +1,8 @@
 import ProductCard from '@components/ProductCard'
-import useList from '@hooks/useList'
+import useProducts from '@hooks/useProducts'
 
 export default function ProductList() {
-  const { products } = useList()
+  const { products } = useProducts()
 
   const renderProduct = () =>
     products.map((product, key) => {

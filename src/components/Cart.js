@@ -1,6 +1,5 @@
 import ProductCart from '@components/ProductCart'
 import Button from '@components/Button'
-import Link from 'next/link'
 
 export default function Cart() {
   const currentProducts = 3
@@ -20,11 +19,9 @@ export default function Cart() {
         <p className="text-sm text-opacity-50">TOTAL</p>
         <p className="font-bold text-lg">{`$ 5,396`}</p>
       </div>
-      <Link href="/checkout">
-        <Button solid={true} full>
-          Checkout
-        </Button>
-      </Link>
+      <Button solid={true} href="/checkout" full>
+        Checkout
+      </Button>
     </div>
   )
 }

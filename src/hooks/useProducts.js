@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { URL } from 'utils/constants'
 
-export default function useRequest() {
+export default function useProducts() {
   const [products, setProducts] = useState([])
   const { query, push } = useRouter()
 
-  const getData = async () => {
+  const getproducts = async () => {
     const product = query.id
 
     if (!product) {
@@ -27,7 +27,7 @@ export default function useRequest() {
   }
 
   useEffect(() => {
-    getData()
+    getproducts()
   }, [query])
 
   return { products }
