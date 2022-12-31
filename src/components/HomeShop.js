@@ -1,5 +1,4 @@
 import { useRouter } from 'next/dist/client/router'
-import { URL_IMAGE } from '../services/path'
 
 import IconButton from '@components/IconButton'
 
@@ -12,7 +11,7 @@ export default function HomeShop() {
         <div className="flex flex-col justify-between mr-8 text-center bg-gradient-to-b via-gray-own from-white to-gray-own pb-7">
           <img
             className="w-9/12 mx-auto"
-            src={URL_IMAGE + 'img/shared/desktop/image-headphones.png'}
+            src={'/img/shared/desktop/image-headphones.png'}
             alt="headphones shop"
           />
           <div>
@@ -26,7 +25,7 @@ export default function HomeShop() {
         <div className="flex flex-col justify-between mr-8 text-center bg-gradient-to-b via-gray-own from-white to-gray-own pb-7">
           <img
             className="w-9/12 mx-auto"
-            src={URL_IMAGE + 'img/shared/desktop/image-speakers.png'}
+            src={'/img/shared/desktop/image-speakers.png'}
             alt="speakers shop"
           />
           <div>
@@ -40,7 +39,7 @@ export default function HomeShop() {
         <div className="flex flex-col justify-between text-center bg-gradient-to-b via-gray-own from-white to-gray-own pb-7">
           <img
             className="w-9/12 mx-auto"
-            src={URL_IMAGE + 'img/shared/desktop/image-earphones.png'}
+            src={'/img/shared/desktop/image-earphones.png'}
             alt="earphones shop"
           />
           <div>

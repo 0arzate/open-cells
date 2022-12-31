@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react'
-import { URL_API, URL_IMAGE } from '../services/path'
 import { useRouter } from 'next/dist/client/router'
 
 import Button from '@components/Button'
+import { URL } from 'utils/constants'
 
 export default function ProductRandom() {
   const { push } = useRouter()
   const [products, setProducts] = useState([])
 
   const getData = async () => {
-    const response = await fetch(URL_API + 'products/all')
+    const response = await fetch(URL + 'products/')
     const data = await response.json()
-    setProducts(data)
+    setProducts(data.data)
   }
 
   useEffect(() => {
@@ -27,14 +27,14 @@ export default function ProductRandom() {
               <div key={product.id} className="flex flex-col items-center">
                 <img
                   className="w-11/12"
-                  src={URL_IMAGE + product.image.desktop}
+                  src={product.image.desktop}
                   alt={product.name}
                 />
                 <h2 className="font-bold text-sm mb-8 mt-10">{product.name}</h2>
                 <Button
                   name="See Product"
                   solid={true}
-                  onClick={() => push(`/product/${product.slug}`)}
+                  onClick={() => push(`/product/${product.id}`)}
                 />
               </div>
             )

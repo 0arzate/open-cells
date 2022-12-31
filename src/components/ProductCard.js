@@ -1,5 +1,4 @@
 import { useRouter } from 'next/dist/client/router'
-import { URL_IMAGE } from '../services/path'
 
 import Button from '@components/Button'
 import InputAmount from '@components/InputAmount'
@@ -16,7 +15,7 @@ export default function ProductCard({
   const PADDING_IMAGE = reverse ? 'pr-32' : 'pl-32'
 
   const changeRoute = () => {
-    push(`/product/${product.slug}`)
+    push(`/product/${product.id}`)
   }
 
   return (
@@ -42,7 +41,7 @@ export default function ProductCard({
       <div className="w-6/12">
         <img
           className={`${PADDING_IMAGE}`}
-          src={URL_IMAGE + product.image?.desktop}
+          src={`${product.image?.desktop}`}
           alt={product.name}
         />
       </div>
