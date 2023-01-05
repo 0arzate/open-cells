@@ -8,7 +8,7 @@ import {
 
 export const request = async ({ method, body, endpoint }) => {
   const METHOD = method || METHOD_GET
-  const BODY = body || NULL
+  const BODY = JSON.stringify(body) || NULL
   const ENDPOINT = endpoint || EMPTY_STRING
 
   const response = await fetch(URL + ENDPOINT, {

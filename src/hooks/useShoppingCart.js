@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { EMPTY_STRING, METHOD_POST } from 'utils/constants'
+import { EMPTY_STRING, METHOD_DELETE, METHOD_POST, _0 } from 'utils/constants'
 import { request } from 'utils/request'
 
 export function useShoppingCart(isOpenShoppingCart) {
@@ -7,6 +7,7 @@ export function useShoppingCart(isOpenShoppingCart) {
   const [error, setError] = useState(EMPTY_STRING)
 
   const getProductsToShoppingCart = async () => {
+    setError(EMPTY_STRING)
     const productsInCart = await request({
       endpoint: 'shopping-cart/',
     })
@@ -18,16 +19,29 @@ export function useShoppingCart(isOpenShoppingCart) {
     setProducts(productsInCart.data)
   }
 
-  const addProductToShoppingCart = async (productId) => {
+  const addProductToShoppingCart = async ({ productId, amount = _0 }) => {
     const response = await request({
       method: METHOD_POST,
       endpoint: `shopping-cart/${productId}`,
+      body: {
+        amount,
+      },
     })
 
     return response
   }
 
-  const removeProductToShoppingCart = (product) => {}
+  const removeProductToShoppingCart = async ({ productId, amount = _0 }) => {
+    const response = await request({
+      method: METHOD_DELETE,
+      endpoint: `shopping-cart/${productId}`,
+      body: {
+        amount,
+      },
+    })
+
+    return response
+  }
 
   useEffect(() => {
     getProductsToShoppingCart()

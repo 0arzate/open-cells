@@ -17,7 +17,7 @@ export default function Layout({ children, bgColor = 'bg-transparent' }) {
       {children}
       <Footer />
       <Modal open={openModal} setOpen={() => setOpenModal(!openModal)}>
-        <Cart />
+        <Cart isOpen={openModal} />
       </Modal>
     </section>
   )
