@@ -4,7 +4,8 @@ import { useShoppingCart } from '@hooks/useShoppingCart'
 import { Fragment } from 'react'
 
 export default function Cart({ isOpen }) {
-  const { products, error } = useShoppingCart(isOpen)
+  const { products, error, removeAllProductsToShoppingCart } =
+    useShoppingCart(isOpen)
   const hasProductsInCart = products.length > 0
   console.log({ products, error })
 
@@ -12,12 +13,15 @@ export default function Cart({ isOpen }) {
     <div className="p-8 bg-white w-[378px] absolute top-[129px] right-[165px] rounded-lg">
       <div className="flex items-center justify-between text-black mb-8">
         <p className="text-lg font-bold">{`CART ( ${products.length} )`}</p>
-        <p className="text-orange-own text-sm cursor-pointer hover:underline">
+        <p
+          className="text-orange-own text-sm cursor-pointer hover:underline"
+          onClick={removeAllProductsToShoppingCart}
+        >
           Remove all
         </p>
       </div>
-      <div>
-        {error ? (
+      <div className="flex flex-col gap-6">
+        {error && !hasProductsInCart ? (
           <p className="text-center">{error}</p>
         ) : (
           products.map((product) => (

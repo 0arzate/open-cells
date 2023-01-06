@@ -4,10 +4,10 @@ import { DECREASE, INCREASE } from 'utils/constants'
 
 export default function ProductCart({
   read,
-  name,
   price,
   image,
   id,
+  shortName,
   amountOnCart,
 }) {
   const { removeProductToShoppingCart, addProductToShoppingCart } =
@@ -27,7 +27,7 @@ export default function ProductCart({
       <img className="max-w-[64px] mr-4" src={image.desktop} alt="producto" />
       <div className="flex items-center justify-between w-full">
         <div className="text-sm w-max">
-          <p className="font-bold mb-1">{name}</p>
+          <p className="font-bold mb-1">{shortName}</p>
           <p className="text-opacity-50">{`$${price}`}</p>
         </div>
         {read ? (

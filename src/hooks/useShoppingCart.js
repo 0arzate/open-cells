@@ -13,7 +13,7 @@ export function useShoppingCart(isOpenShoppingCart) {
     })
 
     if (productsInCart.error) {
-      return setError(productsInCart.message)
+      setError(productsInCart.message)
     }
 
     setProducts(productsInCart.data)
@@ -43,6 +43,17 @@ export function useShoppingCart(isOpenShoppingCart) {
     return response
   }
 
+  const removeAllProductsToShoppingCart = async () => {
+    const response = await request({
+      method: METHOD_DELETE,
+      endpoint: 'shopping-cart/delete-all-products',
+    })
+
+    getProductsToShoppingCart()
+
+    return response
+  }
+
   useEffect(() => {
     getProductsToShoppingCart()
   }, [isOpenShoppingCart])
@@ -51,6 +62,7 @@ export function useShoppingCart(isOpenShoppingCart) {
     products,
     addProductToShoppingCart,
     removeProductToShoppingCart,
+    removeAllProductsToShoppingCart,
     error,
   }
 }

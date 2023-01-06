@@ -27,6 +27,15 @@ export default function ProductCard({
     setAmountToAdd(amount.value)
   }
 
+  const handleAddProductToCart = () => {
+    addProductToShoppingCart({
+      productId: product.id,
+      amount: amountToAdd,
+    })
+
+    setAmountToAdd(_0)
+  }
+
   return (
     <article className={`${DIRECTION} flex items-center mb-40`}>
       <div className="w-7/12">
@@ -43,16 +52,15 @@ export default function ProductCard({
           <Button solid={true} name="See Product" onClick={changeRoute} />
         </div>
         <div className={addToCard ? 'flex gap-8' : 'hidden'}>
-          <InputAmount handleChange={getProductsToCart} />
+          <InputAmount
+            handleChange={getProductsToCart}
+            currentAmount={amountToAdd}
+          />
           <Button
             solid={true}
             name="ADD TO CART"
-            onClick={() =>
-              addProductToShoppingCart({
-                productId: product.id,
-                amount: amountToAdd,
-              })
-            }
+            onClick={handleAddProductToCart}
+            disabled={amountToAdd <= 0}
           />
         </div>
       </div>

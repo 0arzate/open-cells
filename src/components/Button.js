@@ -25,6 +25,8 @@ export default function Button({
     ? 'bg-transparent border border-black text-black hover:text-white hover:bg-black'
     : EMPTY_STRING
 
+  const DISABLED = disabled ? 'bg-slate-200 text-slate-500' : EMPTY_STRING
+
   const moveTo = () => {
     push(href)
   }
@@ -35,7 +37,7 @@ export default function Button({
     <button
       disabled={disabled}
       type="button"
-      className={`${SOLID} ${GHOST} ${IS_FULL} uppercase text-sm font-bold py-4 text-center mb-4 transition-colors`}
+      className={`${SOLID} ${GHOST} ${IS_FULL} ${DISABLED} uppercase text-sm font-bold py-4 text-center mb-4 transition-colors`}
       onClick={handleClick}
       style={{
         minWidth: '160px',
