@@ -1,5 +1,4 @@
 import InputAmount from '@components/InputAmount'
-import { useShoppingCart } from '@hooks/useShoppingCart'
 import { DECREASE, INCREASE } from 'utils/constants'
 
 export default function ProductCart({
@@ -9,16 +8,16 @@ export default function ProductCart({
   id,
   shortName,
   amountOnCart,
+  handleRemoveProduct,
+  handleAddProduct,
 }) {
-  const { removeProductToShoppingCart, addProductToShoppingCart } =
-    useShoppingCart()
   const setAmountToShoppingCart = (amount) => {
     if (amount.type === DECREASE) {
-      return removeProductToShoppingCart({ productId: id })
+      return handleRemoveProduct({ productId: id })
     }
 
     if (amount.type === INCREASE) {
-      return addProductToShoppingCart({ productId: id })
+      return handleAddProduct({ productId: id })
     }
   }
 

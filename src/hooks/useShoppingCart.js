@@ -5,6 +5,7 @@ import { request } from 'utils/request'
 export function useShoppingCart(isOpenShoppingCart) {
   const [products, setProducts] = useState([])
   const [error, setError] = useState(EMPTY_STRING)
+  const [totalCost, setTotalCost] = useState(_0)
 
   const getProductsToShoppingCart = async () => {
     setError(EMPTY_STRING)
@@ -16,7 +17,12 @@ export function useShoppingCart(isOpenShoppingCart) {
       setError(productsInCart.message)
     }
 
-    setProducts(productsInCart.data)
+    if (productsInCart.data.products) {
+      setProducts(productsInCart.data.products)
+      setTotalCost(productsInCart.data.total)
+    } else {
+      setProducts([])
+    }
   }
 
   const addProductToShoppingCart = async ({ productId, amount = _0 }) => {
@@ -27,6 +33,8 @@ export function useShoppingCart(isOpenShoppingCart) {
         amount,
       },
     })
+
+    getProductsToShoppingCart()
 
     return response
   }
@@ -39,6 +47,8 @@ export function useShoppingCart(isOpenShoppingCart) {
         amount,
       },
     })
+
+    getProductsToShoppingCart()
 
     return response
   }
@@ -63,6 +73,7 @@ export function useShoppingCart(isOpenShoppingCart) {
     addProductToShoppingCart,
     removeProductToShoppingCart,
     removeAllProductsToShoppingCart,
+    totalCost,
     error,
   }
 }
