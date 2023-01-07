@@ -1,17 +1,33 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import IconButton from '@components/IconButton'
+import { DECREASE, EMPTY_FUNCTION, INCREASE, _0 } from 'utils/constants'
 
-export default function InputAmount({ handleChange }) {
-  const [amount, setAmount] = useState(1)
+export default function InputAmount({
+  handleChange = EMPTY_FUNCTION,
+  currentAmount = _0,
+}) {
+  const [amount, setAmount] = useState(0)
 
   const increase = () => {
-    setAmount(amount + 1)
+    setAmount((currentValue) => {
+      const newValue = currentValue + 1
+      handleChange({ type: INCREASE, value: newValue })
+      return newValue
+    })
   }
 
   const decrease = () => {
-    setAmount(amount - 1)
+    setAmount((currentValue) => {
+      const newValue = currentValue - 1
+      handleChange({ type: DECREASE, value: newValue })
+      return newValue
+    })
   }
+
+  useEffect(() => {
+    setAmount(currentAmount)
+  }, [currentAmount])
 
   return (
     <div className="h-12 max-h-max flex items-center bg-gray-own max-w-max p-4">
@@ -19,7 +35,7 @@ export default function InputAmount({ handleChange }) {
         iconName="fas fa-minus"
         onlyIcon={true}
         onClick={decrease}
-        active={amount > 1}
+        active={amount > 0}
       />
       <input
         type="text"
@@ -28,7 +44,6 @@ export default function InputAmount({ handleChange }) {
         className="w-20 max-w-max text-center outline-none focus:outline-none"
         disabled
         value={amount}
-        onChange={handleChange}
       />
       <IconButton
         iconName="fas fa-plus"

@@ -1,15 +1,10 @@
 import Button from './Button'
-import ProductCart from './ProductCart'
 
 export default function Summary({ handleContinue }) {
   return (
     <div className="p-8 min-w-[350px] bg-white h-min">
       <h2 className="font-bold text-lg">summary</h2>
-      <div className="my-8 grid grid-cols-1 gap-6">
-        <ProductCart read />
-        <ProductCart read />
-        <ProductCart read />
-      </div>
+      <div className="my-8 grid grid-cols-1 gap-6"></div>
       <div className="grid grid-cols-1 gap-2 font-medium text-[15px] mb-6">
         <div className="flex items-center justify-between">
           <p className="text-black text-opacity-50">TOTAL</p>

@@ -36,7 +36,7 @@ export default function Product() {
           onClick={() => back()}
           margin="72px 0px 72px 0px"
         />
-        <ProductCard product={product} reverse={true} addToCard={true} />
+        <ProductCard product={product} reverse addToCard />
       </div>
       <ProductDescription product={product} />
       <ProductImages product={product} />

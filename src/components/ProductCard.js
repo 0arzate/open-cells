@@ -2,6 +2,9 @@ import { useRouter } from 'next/dist/client/router'
 
 import Button from '@components/Button'
 import InputAmount from '@components/InputAmount'
+import { useShoppingCart } from '@hooks/useShoppingCart'
+import { useState } from 'react'
+import { _0 } from 'utils/constants'
 
 export default function ProductCard({
   isNew = false,
@@ -9,6 +12,8 @@ export default function ProductCard({
   addToCard = false,
   product = {},
 }) {
+  const [amountToAdd, setAmountToAdd] = useState(_0)
+  const { addProductToShoppingCart } = useShoppingCart()
   const { push } = useRouter()
   const NEW = isNew ? 'inline-block' : 'hidden'
   const DIRECTION = reverse ? 'flex-row-reverse' : ''
@@ -16,6 +21,19 @@ export default function ProductCard({
 
   const changeRoute = () => {
     push(`/product/${product.id}`)
+  }
+
+  const getProductsToCart = (amount) => {
+    setAmountToAdd(amount.value)
+  }
+
+  const handleAddProductToCart = () => {
+    addProductToShoppingCart({
+      productId: product.id,
+      amount: amountToAdd,
+    })
+
+    setAmountToAdd(_0)
   }
 
   return (
@@ -34,8 +52,16 @@ export default function ProductCard({
           <Button solid={true} name="See Product" onClick={changeRoute} />
         </div>
         <div className={addToCard ? 'flex gap-8' : 'hidden'}>
-          <InputAmount />
-          <Button solid={true} name="ADD TO CART" onClick={changeRoute} />
+          <InputAmount
+            handleChange={getProductsToCart}
+            currentAmount={amountToAdd}
+          />
+          <Button
+            solid={true}
+            name="ADD TO CART"
+            onClick={handleAddProductToCart}
+            disabled={amountToAdd <= 0}
+          />
         </div>
       </div>
       <div className="w-6/12">
