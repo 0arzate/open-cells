@@ -1,5 +1,4 @@
 export default function RadioInput({
-  name,
   value = 'emoney',
   onChange,
   options = [],
@@ -16,7 +15,7 @@ export default function RadioInput({
             type="radio"
             name={option.name}
             value={option.name}
-            checked={value === option.name}
+            defaultChecked={value === option.name}
             onChange={onChange}
           />
           <span>{option.label}</span>

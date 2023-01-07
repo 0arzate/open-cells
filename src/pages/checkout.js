@@ -19,7 +19,7 @@ export default function Checkout() {
           name="Go back"
           iconName=""
           onClick={() => back()}
-          margin="91px 0px 37px 0px"
+          margin="0px 0px 37px 0px"
         />
         <div className="grid grid-cols-[68%_32%] gap-8">
           <CheckoutForm />

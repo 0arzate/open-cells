@@ -16,7 +16,12 @@ export default function InputText({
     : 'border border-gray-light focus:border-orange-own'
 
   const validation = (e) => {
-    setError('Wrong format')
+    const { name } = e.target
+
+    if (name === 'email') {
+      setError('Wrong format')
+    }
+    onChange(e)
   }
 
   return (
@@ -39,10 +44,7 @@ export default function InputText({
         id={id}
         placeholder={placeholder}
         value={value}
-        onChange={(e) => {
-          onChange(e)
-          validation(e)
-        }}
+        onChange={validation}
       />
     </div>
   )
