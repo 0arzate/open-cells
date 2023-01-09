@@ -26,7 +26,7 @@ export default function Checkout() {
           <Summary handleContinue={() => setOpen(true)} />
         </div>
       </div>
-      <Modal open={open}>
+      <Modal open={open} modalOverEverything>
         <CheckoutSuccess />
       </Modal>
     </Layout>

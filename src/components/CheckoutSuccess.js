@@ -16,7 +16,7 @@ export default function CheckoutSuccess() {
         You will receive an email confirmation shortly.
       </p>
       <div className="flex items-center mb-12">
-        <div className="bg-[#F1F1F1] p-6">
+        <div className="bg-[#F1F1F1] p-6 min-h-[140px]">
           <div className="flex justify-between w-full">
             <img
               className="max-w-[50px] mr-4"
@@ -35,7 +35,7 @@ export default function CheckoutSuccess() {
             </p>
           ) : null}
         </div>
-        <div className="bg-black py-10 pl-8 pr-16 text-white h-full">
+        <div className="bg-black py-10 pl-8 pr-16 text-white h-full min-h-[140px]">
           <p className="text-sm text-white text-opacity-50">GRAND TOTAL</p>
           <p className="text-lg font-bold">
             {USDFormat(grandTotal.grandTotal)}

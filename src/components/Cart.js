@@ -14,13 +14,19 @@ export default function Cart({ isOpen }) {
     removeProductToShoppingCart,
   } = useShoppingCart(isOpen)
   const hasProductsInCart = products.length > 0
+  const showHasProductsInCart = hasProductsInCart ? '' : 'hidden'
+  const marginHasProductsInCart = hasProductsInCart ? 'mb-8' : ''
 
   return (
     <div className="p-8 bg-white w-[378px] absolute top-[129px] right-[165px] rounded-lg">
-      <div className="flex items-center justify-between text-black mb-8">
-        <p className="text-lg font-bold">{`CART ( ${products.length} )`}</p>
+      <div
+        className={`${marginHasProductsInCart} flex items-center justify-between text-black`}
+      >
         <p
-          className="text-orange-own text-sm cursor-pointer hover:underline"
+          className={`${showHasProductsInCart} text-lg font-bold`}
+        >{`CART ( ${products.length} )`}</p>
+        <p
+          className={`${showHasProductsInCart} text-orange-own text-sm cursor-pointer hover:underline`}
           onClick={removeAllProductsToShoppingCart}
         >
           Remove all
