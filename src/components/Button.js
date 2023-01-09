@@ -1,6 +1,5 @@
-import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { EMPTY_STRING } from 'utils/constants'
+import { EMPTY_FUNCTION, EMPTY_STRING } from 'utils/constants'
 
 export default function Button({
   name = 'nombre',
@@ -11,7 +10,7 @@ export default function Button({
   bgColor = 'bg-orange-own',
   margin,
   href,
-  onClick,
+  onClick = EMPTY_FUNCTION,
   disabled,
 }) {
   const { push } = useRouter()
@@ -27,11 +26,13 @@ export default function Button({
 
   const DISABLED = disabled ? 'bg-slate-200 text-slate-500' : EMPTY_STRING
 
-  const moveTo = () => {
-    push(href)
-  }
+  const handleClick = () => {
+    if (href) {
+      push(href)
+    }
 
-  const handleClick = href ? moveTo : onClick
+    onClick()
+  }
 
   return (
     <button
@@ -45,13 +46,7 @@ export default function Button({
         margin: margin,
       }}
     >
-      {href ? (
-        <Link href={href}>
-          <span>{children || name}</span>
-        </Link>
-      ) : (
-        children || name
-      )}
+      {children || name}
     </button>
   )
 }
