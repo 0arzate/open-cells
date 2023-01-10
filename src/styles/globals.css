@@ -5,3 +5,17 @@
   background-repeat: no-repeat;
   max-height: 560px;
 }
+
+.bg-image-hero {
+  background-image: url('/img/home/desktop/image-hero.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: calc(50% + 40px) calc(50% - 50px);
+}
+
+@media (max-width: 768px) {
+  .bg-image-hero {
+    background-position: calc(50% - 300px);
+    background-size: 230%;
+  }
+}
