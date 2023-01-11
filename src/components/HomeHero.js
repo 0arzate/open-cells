@@ -6,7 +6,7 @@ export default function HomeHero() {
   const router = useRouter()
   return (
     <section
-      className="bg-black-light text-white flex align-middle bg-image-hero"
+      className="text-white flex align-middle bg-image-hero"
       style={{ minHeight: '632px' }}
     >
       <div className="w-10/12 2xl:w-8/12 mx-auto flex items-center min-h-[346px] pb-40 pt-32">

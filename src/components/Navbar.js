@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <nav>
-      <ul className="flex uppercase font-bold text-sm">
+      <ul className="hidden lg:flex uppercase font-bold text-sm">
         <Link href="/">
           <a
             className={`${isActive(
