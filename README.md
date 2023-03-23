@@ -37,3 +37,7 @@ npm run dev
 ## Authors
 
 - [@ArzCop](https://twitter.com/_ArzCorp_) (Osvaldo Arzate Santiago)
+
+## Versión
+
+🔖 v1.0.0
