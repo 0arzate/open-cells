@@ -12,41 +12,37 @@ export default function Navbar() {
   return (
     <nav>
       <ul className="hidden lg:flex uppercase font-bold text-sm">
-        <Link href="/">
-          <a
-            className={`${isActive(
-              '/'
-            )} mr-8 hover:text-orange-own transition-colors`}
-          >
-            Home
-          </a>
+        <Link
+          href="/"
+          className={`${isActive(
+            '/'
+          )} mr-8 hover:text-orange-own transition-colors`}
+        >
+          Home
         </Link>
-        <Link href="/catalogue/headphones">
-          <a
-            className={`${isActive(
-              '/catalogue/headphones'
-            )} mr-8 hover:text-orange-own transition-colors`}
-          >
-            HEADPHONES
-          </a>
+        <Link
+          href="/catalogue/headphones"
+          className={`${isActive(
+            '/catalogue/headphones'
+          )} mr-8 hover:text-orange-own transition-colors`}
+        >
+          HEADPHONES
         </Link>
-        <Link href="/catalogue/speakers">
-          <a
-            className={`${isActive(
-              '/catalogue/speakers'
-            )} mr-8 hover:text-orange-own transition-colors`}
-          >
-            SPEAKERS
-          </a>
+        <Link
+          href="/catalogue/speakers"
+          className={`${isActive(
+            '/catalogue/speakers'
+          )} mr-8 hover:text-orange-own transition-colors`}
+        >
+          SPEAKERS
         </Link>
-        <Link href="/catalogue/earphones">
-          <a
-            className={`${isActive(
-              '/catalogue/earphones'
-            )} hover:text-orange-own transition-colors`}
-          >
-            EARPHONES
-          </a>
+        <Link
+          href="/catalogue/earphones"
+          className={`${isActive(
+            '/catalogue/earphones'
+          )} hover:text-orange-own transition-colors`}
+        >
+          EARPHONES
         </Link>
       </ul>
     </nav>
