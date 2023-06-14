@@ -10,6 +10,12 @@ export const URL = process.env.NEXT_PUBLIC_URL || 'http://localhost:5000/'
 export const METHOD_GET = 'GET'
 export const METHOD_POST = 'POST'
 export const METHOD_DELETE = 'DELETE'
-export const HEADERS_JSON = {
+export const HEADERS = {
   'Content-Type': 'application/json',
+}
+
+export const API_METHODS = {
+  GET: 'GET',
+  POST: 'POST',
+  DELETE: 'DELETE',
 }

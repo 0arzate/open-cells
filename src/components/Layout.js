@@ -2,8 +2,6 @@ import { useState } from 'react'
 
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import Modal from '@components/Modal'
-import Cart from '@components/Cart'
 
 export default function Layout({ children, bgColor = 'bg-transparent' }) {
   const [openModal, setOpenModal] = useState(false)
@@ -16,9 +14,6 @@ export default function Layout({ children, bgColor = 'bg-transparent' }) {
       />
       {children}
       <Footer />
-      <Modal open={openModal} setOpen={() => setOpenModal(!openModal)}>
-        <Cart isOpen={openModal} />
-      </Modal>
     </section>
   )
 }

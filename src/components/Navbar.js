@@ -1,8 +1,10 @@
+import useCatalogues from '@hooks/useCatalogues'
 import { useRouter } from 'next/dist/client/router'
 
 import Link from 'next/link'
 
 export default function Navbar() {
+  const {} = useCatalogues()
   const router = useRouter()
 
   const isActive = (id) => {
