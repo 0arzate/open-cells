@@ -4,11 +4,11 @@ import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
 
 export default function Navbar() {
-  const {} = useCatalogues()
+  const { catalogues } = useCatalogues()
   const router = useRouter()
 
-  const isActive = (id) => {
-    return router.asPath === id ? 'text-orange-own' : 'text-white'
+  const isActive = (currentPath) => {
+    return router.asPath === currentPath ? 'text-orange-own' : 'text-white'
   }
 
   return (
@@ -22,30 +22,21 @@ export default function Navbar() {
         >
           Home
         </Link>
-        <Link
-          href="/catalogue/headphones"
-          className={`${isActive(
-            '/catalogue/headphones'
-          )} mr-8 hover:text-orange-own transition-colors`}
-        >
-          HEADPHONES
-        </Link>
-        <Link
-          href="/catalogue/speakers"
-          className={`${isActive(
-            '/catalogue/speakers'
-          )} mr-8 hover:text-orange-own transition-colors`}
-        >
-          SPEAKERS
-        </Link>
-        <Link
-          href="/catalogue/earphones"
-          className={`${isActive(
-            '/catalogue/earphones'
-          )} hover:text-orange-own transition-colors`}
-        >
-          EARPHONES
-        </Link>
+        {catalogues.map((catalog) => {
+          const { name, id } = catalog
+
+          return (
+            <Link
+              key={id}
+              href={`/catalogue/${name}`}
+              className={`${isActive(
+                `/catalogue/${name}`
+              )} mr-8 hover:text-orange-own transition-colors`}
+            >
+              {name}
+            </Link>
+          )
+        })}
       </ul>
     </nav>
   )

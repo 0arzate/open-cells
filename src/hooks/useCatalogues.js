@@ -5,18 +5,19 @@ import { request } from 'utils/request'
 export default function useCatalogues() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(EMPTY_STRING)
-  const [catalogues, setCatalogues] = useState()
+  const [catalogues, setCatalogues] = useState([])
 
   const getCatalogues = async () => {
     setError(EMPTY_STRING)
     setLoading(true)
 
     try {
-      const { data, success, error } = await request({
+      const { data, error } = await request({
         endpoint: '/categories',
       })
 
       if (error) throw new Error(error)
+      console.log(data)
       setCatalogues(data)
     } catch (error) {
       setError(error.message)
