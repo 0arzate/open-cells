@@ -1,53 +1,42 @@
+import useCatalogues from '@hooks/useCatalogues'
 import { useRouter } from 'next/dist/client/router'
 
 import Link from 'next/link'
 
 export default function Navbar() {
+  const { catalogues } = useCatalogues()
   const router = useRouter()
 
-  const isActive = (id) => {
-    return router.asPath === id ? 'text-orange-own' : 'text-white'
+  const isActive = (currentPath) => {
+    return router.asPath === currentPath ? 'text-orange-own' : 'text-white'
   }
 
   return (
     <nav>
       <ul className="hidden lg:flex uppercase font-bold text-sm">
-        <Link href="/">
-          <a
-            className={`${isActive(
-              '/'
-            )} mr-8 hover:text-orange-own transition-colors`}
-          >
-            Home
-          </a>
+        <Link
+          href="/"
+          className={`${isActive(
+            '/'
+          )} mr-8 hover:text-orange-own transition-colors`}
+        >
+          Home
         </Link>
-        <Link href="/catalogue/headphones">
-          <a
-            className={`${isActive(
-              '/catalogue/headphones'
-            )} mr-8 hover:text-orange-own transition-colors`}
-          >
-            HEADPHONES
-          </a>
-        </Link>
-        <Link href="/catalogue/speakers">
-          <a
-            className={`${isActive(
-              '/catalogue/speakers'
-            )} mr-8 hover:text-orange-own transition-colors`}
-          >
-            SPEAKERS
-          </a>
-        </Link>
-        <Link href="/catalogue/earphones">
-          <a
-            className={`${isActive(
-              '/catalogue/earphones'
-            )} hover:text-orange-own transition-colors`}
-          >
-            EARPHONES
-          </a>
-        </Link>
+        {catalogues.map((catalog) => {
+          const { name, id } = catalog
+
+          return (
+            <Link
+              key={id}
+              href={`/catalogue/${name}`}
+              className={`${isActive(
+                `/catalogue/${name}`
+              )} mr-8 hover:text-orange-own transition-colors`}
+            >
+              {name}
+            </Link>
+          )
+        })}
       </ul>
     </nav>
   )
