@@ -8,7 +8,7 @@ const SCSS_REGEX = /\.scss$/;
 const OUTPUT_EXTENSION = ".css.js";
 const isWatchMode = process.argv.includes("--watch");
 
-const inputDir = "src/app";
+const inputDir = "app";
 
 const getCSSTemplate = (result) => `
 import { css } from 'lit';

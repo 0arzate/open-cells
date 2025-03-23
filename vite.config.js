@@ -14,8 +14,8 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: path.resolve(__dirname, 'src/locales') + '/[!.]*',
-          dest: 'src/locales'
+          src: path.resolve(__dirname, 'public/locales') + '/[!.]*',
+          dest: 'public/locales'
         }
       ]
     })
