@@ -1,10 +1,32 @@
 {
   "es-MX": {
+    "languages.es-mx": "Español",
+    "languages.en-us": "Inglés",
+
     "home-page.title": "Pagina principal",
-    "second-page.title": "Segunda pagina"
+    "home-page.button.text": "Ir a segunda pagina",
+
+    "second-page.title": "Segunda pagina",
+    "second-page.button.text": "Ir a pagina principal",
+
+    "app-header.lang-button.text": "Idioma:",
+    "app-header.app-name": "Sngular training",
+    "app-header.app-theme.dark": "Obscuro",
+    "app-header.app-theme.light": "Claro"
   },
   "en-US": {
+    "languages.es-mx": "Spanish",
+    "languages.en-us": "English",
+
     "home-page.title": "Home page",
-    "second-page.title": "Second page"
+    "home-page.button.text": "Go to second page"
+,
+    "second-page.title": "Second page",
+    "second-page.button.text": "Go to home page",
+
+    "app-header.lang-button.text": "Language:",
+    "app-header.app-name": "Sngular training",
+    "app-header.app-theme.dark": "Dark",
+    "app-header.app-theme.light": "Light"
   }
 }

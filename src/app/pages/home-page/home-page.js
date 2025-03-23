@@ -1,8 +1,8 @@
 import { html } from 'lit';
 
-import { CorePage } from '../../config/core-page.js';
+import { CorePage } from '../../utils';
 
-import styles from './home-page.css.js';
+import styles from './home-page.css';
 
 export class HomePage extends CorePage {
   constructor() {
@@ -21,20 +21,13 @@ export class HomePage extends CorePage {
     this.navigate('second');
   }
 
-  sendGreeting() {
-    this.publish('greeting', "Hello from home page");
-  }
-
-  handlerNavigateToHome() {
-    this.sendGreeting();
-    this.navigateToSecondPage();
-  }
-
   render() {
     return html`
       <main>
         <h1>${this.t("home-page.title")}</h1>
-        <button @click="${this.handlerNavigateToHome}">Go to second page</button>
+        <button @click="${this.navigateToSecondPage}">
+          ${this.t("home-page.button.text")}
+        </button>
       </main>
     `;
   }

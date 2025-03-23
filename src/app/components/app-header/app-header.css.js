@@ -8,12 +8,11 @@ export const styles = css`
   margin: 0px;
 }
 
-p {
-  color: red;
-}
-
-h1 {
-  color: purple;
+header {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 `;
 

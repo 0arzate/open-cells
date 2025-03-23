@@ -4,7 +4,7 @@ export const routes = [
     name: 'home',
     component: 'home-page',
     action: async () => {
-      await import('../pages/home/home-page.js');
+      await import('../pages/home-page/home-page.js');
     },
   },
   {
@@ -12,7 +12,7 @@ export const routes = [
     name: 'second',
     component: 'second-page',
     action: async () => {
-      await import('../pages/second/second-page.js');
+      await import('../pages/second-page/second-page.js');
     },
   }
 ];

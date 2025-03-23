@@ -23,15 +23,15 @@ const styles = css`
     height: 100%;
     box-sizing: border-box;
   }
+
   main {
     flex: 1;
-    position: relative;
     overflow: hidden;
   }
 
   main ::slotted(*) {
     position: absolute;
-    top: 0;
+    top: 40px;
     left: 0;
     right: 0;
     bottom: 0;

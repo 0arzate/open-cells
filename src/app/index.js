@@ -3,9 +3,11 @@ import { LitElement, html } from 'lit';
 import { startApp } from '@open-cells/core';
 import { ElementController } from '@open-cells/element-controller';
 
-import styles from './index.css.js';
+import styles from './index.css';
 
-import { routes } from './router/routes.js';
+import { routes } from './router/routes';
+
+import "./components/app-header/app-header"
 
 import {
   setUrl,
@@ -42,7 +44,10 @@ export class AppIndex extends LitElement {
   render() {
     return html`
       <main role="main" tabindex="-1">
-        <slot></slot>
+        <page-header></page-header>
+        <slot>
+
+        </slot>
       </main>
     `;
   }
