@@ -1,20 +1,34 @@
-import { html, LitElement } from 'lit';
+import { html } from 'lit';
 
-import { PageController } from '@open-cells/page-controller';
-
-export class HomePage extends LitElement {
+import { CorePage } from '../../config/core-page';
+export class HomePage extends CorePage {
   constructor() {
     super();
-    this.pageController = new PageController(this);
   }
 
   static get is() {
     return 'home-page';
   }
 
+  navigateToSecondPage() {
+    this.navigate('second');
+  }
+
+  sendGreeting() {
+    this.publish('greeting', "Hello from home page");
+  }
+
+  handlerNavigateToHome() {
+    this.sendGreeting();
+    this.navigateToSecondPage();
+  }
+
   render() {
     return html`
-      <button @click="${() => this.pageController.navigate('second')}">Go to second page</button>
+      <main>
+        <h1>${this.t("home-page.title")}</h1>
+        <button @click="${this.handlerNavigateToHome}">Go to second page</button>
+      </main>
     `;
   }
 }
