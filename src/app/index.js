@@ -3,9 +3,9 @@ import { LitElement, html } from 'lit';
 import { startApp } from '@open-cells/core';
 import { ElementController } from '@open-cells/element-controller';
 
-import styles from './app-index.css.js';
+import styles from './index.css.js';
 
-import { routes } from '../router/routes.js';
+import { routes } from './router/routes.js';
 
 import {
   setUrl,

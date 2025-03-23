@@ -1,6 +1,6 @@
 import { html } from 'lit';
 
-import { CorePage } from '../../config/core-page';
+import { CorePage } from '../../config/core-page.js';
 
 import styles from './second-page.css.js';
 

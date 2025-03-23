@@ -7,8 +7,8 @@
   "type": "module",
   "scripts": {
     "dev": "npx concurrently \"npm run dev:css\" \"vite --port 3000\"",
-    "build:css": "node src/config/compile-scss.js",
-    "dev:css": "node src/config/compile-scss.js --watch",
+    "build:css": "node src/app/config/compile-scss.js",
+    "dev:css": "node src/app/config/compile-scss.js --watch",
     "build": "npm run build:css && vite build",
     "preview": "npm run build && vite preview"
   },

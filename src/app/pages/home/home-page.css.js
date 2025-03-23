@@ -9,7 +9,7 @@ export const styles = css`
 }
 
 h1 {
-  color: green;
+  color: red;
 }
 `;
 

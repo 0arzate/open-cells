@@ -1,6 +1,7 @@
 import { html } from 'lit';
 
-import { CorePage } from '../../config/core-page';
+import { CorePage } from '../../config/core-page.js';
+
 import styles from './home-page.css.js';
 
 export class HomePage extends CorePage {
