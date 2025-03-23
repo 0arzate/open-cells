@@ -7,6 +7,19 @@ import styles from './app-index.css.js';
 
 import { routes } from '../router/routes.js';
 
+import {
+  setUrl,
+  setLocalesHost,
+  requestResources,
+  setUseBundles,
+} from '@open-cells/localize';
+
+setUseBundles(true);
+setLocalesHost('./src/locales');
+setUrl('locales.json');
+
+requestResources();
+
 startApp({
   routes,
   mainNode: 'app-content',

@@ -2,6 +2,8 @@ import { html } from 'lit';
 
 import { CorePage } from '../../config/core-page';
 
+import styles from './second-page.css.js';
+
 export class SecondPage extends CorePage {
   constructor() {
     super();
@@ -18,6 +20,10 @@ export class SecondPage extends CorePage {
     return {
       greeting: { type: String },
     };
+  }
+
+  static get styles() {
+    return styles;
   }
 
   handlerChannelGreeting() {

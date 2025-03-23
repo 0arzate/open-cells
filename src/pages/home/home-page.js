@@ -1,6 +1,8 @@
 import { html } from 'lit';
 
 import { CorePage } from '../../config/core-page';
+import styles from './home-page.css.js';
+
 export class HomePage extends CorePage {
   constructor() {
     super();
@@ -8,6 +10,10 @@ export class HomePage extends CorePage {
 
   static get is() {
     return 'home-page';
+  }
+
+  static get styles() {
+    return styles
   }
 
   navigateToSecondPage() {
