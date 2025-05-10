@@ -7,6 +7,7 @@ import styles from './index.css';
 
 import { routes } from './router/routes';
 
+import "./components/app-layout/app-layout";
 import "./components/app-header/app-header"
 
 import {
@@ -43,12 +44,14 @@ export class AppIndex extends LitElement {
 
   render() {
     return html`
-      <main role="main" tabindex="-1">
+    <app-layout>
+      <main slot="content" role="main" tabindex="-1">
         <page-header></page-header>
         <slot>
 
         </slot>
       </main>
+    </app-layout>
     `;
   }
 }

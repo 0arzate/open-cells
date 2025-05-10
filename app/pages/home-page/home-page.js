@@ -4,6 +4,8 @@ import { CorePage } from '../../utils';
 
 import styles from './home-page.css';
 
+import '@material/web/button/filled-button.js';
+
 export class HomePage extends CorePage {
   constructor() {
     super();
@@ -23,12 +25,14 @@ export class HomePage extends CorePage {
 
   render() {
     return html`
-      <main>
+    <app-layout>
+      <main slot="content">
         <h1>${this.t("home-page.title")}</h1>
-        <button @click="${this.navigateToSecondPage}">
+        <md-filled-button @click="${this.navigateToSecondPage}">
           ${this.t("home-page.button.text")}
-        </button>
+        </md-filled-button>
       </main>
+    </app-layout>
     `;
   }
 }

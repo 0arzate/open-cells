@@ -13,6 +13,7 @@
     "preview": "npm run build && vite preview"
   },
   "dependencies": {
+    "@material/web": "^2.3.0",
     "@open-cells/core": "^1.0.1",
     "@open-cells/element-controller": "^1.0.1",
     "@open-cells/localize": "^1.1.1",

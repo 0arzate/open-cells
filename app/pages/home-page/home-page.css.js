@@ -3,13 +3,14 @@ import { css } from 'lit';
 
 export const styles = css`
 
-* {
-  padding: 0px;
-  margin: 0px;
-}
-
 h1 {
   color: red;
+}
+
+app-layout {
+  display: inline-block;
+  background-color: #f5f5f4;
+  height: calc(100vh - 100px);
 }
 `;
 

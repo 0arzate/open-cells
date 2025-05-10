@@ -5,6 +5,8 @@ import styles from "./app-header.css"
 
 import { LANGUAGES, LANGUAGES_LABELS, THEME_LABELS, THEMES } from "../../utils/constants";
 
+import '@material/web/button/filled-button.js';
+
 class PageHeader extends CorePage {
   constructor() {
     super()
@@ -59,12 +61,12 @@ class PageHeader extends CorePage {
       <header>
         <h1>${this.t('app-header.app-name')}</h1>
         <div>
-          <button @click="${this.toggleLang}">
+          <md-filled-button @click="${this.toggleLang}">
             ${`${this.t("app-header.lang-button.text")} ${this.t(this.langLabel)}`}
-          </button>
-          <button @click="${this.toggleTheme}">
+          </md-filled-button>
+          <md-filled-button @click="${this.toggleTheme}">
             ${this.themeLabel}
-          </button>
+          </md-filled-button>
         </div>
       </header>
     `

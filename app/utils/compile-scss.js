@@ -14,12 +14,7 @@ const getCSSTemplate = (result) => `
 import { css } from 'lit';
 
 export const styles = css\`
-${`
-* {
-  padding: 0px;
-  margin: 0px;
-}
-`}
+
 ${result.css}
 \`;
 

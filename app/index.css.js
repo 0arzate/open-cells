@@ -31,7 +31,7 @@ const styles = css`
 
   main ::slotted(*) {
     position: absolute;
-    top: 40px;
+    top: 100px;
     left: 0;
     right: 0;
     bottom: 0;

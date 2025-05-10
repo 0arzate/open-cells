@@ -5,3 +5,9 @@ p {
 h1 {
   color: darkcyan;
 }
+
+app-layout {
+  display: inline-block;
+  background-color: #fafaf9;
+  height: calc(100vh - 100px);
+}

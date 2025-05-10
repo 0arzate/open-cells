@@ -3,16 +3,11 @@ import { css } from 'lit';
 
 export const styles = css`
 
-* {
-  padding: 0px;
-  margin: 0px;
-}
-
 header {
-  height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px 0px;
 }
 `;
 

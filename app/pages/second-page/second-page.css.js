@@ -3,17 +3,18 @@ import { css } from 'lit';
 
 export const styles = css`
 
-* {
-  padding: 0px;
-  margin: 0px;
-}
-
 p {
   color: red;
 }
 
 h1 {
   color: darkcyan;
+}
+
+app-layout {
+  display: inline-block;
+  background-color: #fafaf9;
+  height: calc(100vh - 100px);
 }
 `;
 
