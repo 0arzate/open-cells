@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "open-cells",
-  "description": "An application built using Open Cells and Lit",
+  "description": "An application built using Cells framework by BBVA",
   "license": "Apache-2.0",
   "version": "0.1.1",
   "type": "module",
@@ -13,22 +13,17 @@
     "preview": "npm run build && vite preview"
   },
   "dependencies": {
-    "@material/web": "^2.3.0",
-    "@open-cells/core": "^1.0.1",
-    "@open-cells/element-controller": "^1.0.1",
-    "@open-cells/localize": "^1.1.1",
-    "@open-cells/page-controller": "^1.0.1",
-    "@open-cells/page-mixin": "^1.1.1",
-    "lit": "^3.0.0",
-    "vite-plugin-static-copy": "^2.3.0"
+    "@open-cells/core": "1.0.1",
+    "@open-cells/element-controller": "1.0.1",
+    "@open-cells/localize": "1.1.1",
+    "@open-cells/page-controller": "1.0.1",
+    "@open-cells/page-mixin": "1.1.1",
+    "lit": "3.0.0",
+    "vite-plugin-static-copy": "2.3.0"
   },
   "devDependencies": {
-    "fs-extra": "^11.3.0",
-    "sass": "^1.86.0",
-    "vite": "^5.2.7"
-  },
-  "engines": {
-    "node": ">=18.15.0",
-    "npm": ">=7.0.0"
+    "fs-extra": "11.3.0",
+    "sass": "1.86.0",
+    "vite": "5.2.7"
   }
 }

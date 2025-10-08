@@ -10,7 +10,7 @@
     "second-page.button.text": "Ir a pagina principal",
 
     "app-header.lang-button.text": "Idioma:",
-    "app-header.app-name": "Sngular training",
+    "app-header.app-name": "Open cells template",
     "app-header.app-theme.dark": "Obscuro",
     "app-header.app-theme.light": "Claro"
   },
@@ -25,7 +25,7 @@
     "second-page.button.text": "Go to home page",
 
     "app-header.lang-button.text": "Language:",
-    "app-header.app-name": "Sngular training",
+    "app-header.app-name": "Open cells template",
     "app-header.app-theme.dark": "Dark",
     "app-header.app-theme.light": "Light"
   }

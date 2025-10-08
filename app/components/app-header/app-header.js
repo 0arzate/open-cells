@@ -1,13 +1,11 @@
-import { html } from "lit";
-import { CorePage } from "../../utils";
+import { html, LitElement } from "lit";
+import { LocalizeMixin } from "@open-cells/localize";
 
 import styles from "./app-header.css"
 
 import { LANGUAGES, LANGUAGES_LABELS, THEME_LABELS, THEMES } from "../../utils/constants";
 
-import '@material/web/button/filled-button.js';
-
-class PageHeader extends CorePage {
+class appHeader extends LocalizeMixin(LitElement) {
   constructor() {
     super()
 
@@ -16,7 +14,7 @@ class PageHeader extends CorePage {
   }
 
   static get is() {
-    return 'page-header'
+    return 'app-header'
   }
 
   static get styles() {
@@ -61,16 +59,16 @@ class PageHeader extends CorePage {
       <header>
         <h1>${this.t('app-header.app-name')}</h1>
         <div>
-          <md-filled-button @click="${this.toggleLang}">
+          <button @click="${this.toggleLang}">
             ${`${this.t("app-header.lang-button.text")} ${this.t(this.langLabel)}`}
-          </md-filled-button>
-          <md-filled-button @click="${this.toggleTheme}">
+          </button>
+          <button @click="${this.toggleTheme}">
             ${this.themeLabel}
-          </md-filled-button>
+          </button>
         </div>
       </header>
     `
   }
 }
 
-customElements.define(PageHeader.is, PageHeader)
+customElements.define(appHeader.is, appHeader)
