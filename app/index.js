@@ -7,8 +7,6 @@ import styles from './index.css'
 
 import { routes } from './router/routes'
 
-import './components/app-header/app-header'
-
 import {
   setUrl,
   setLocalesHost,

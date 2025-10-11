@@ -1,27 +1,27 @@
-import { html } from 'lit';
+import { html } from 'lit'
 
-import { CorePage } from '../../utils';
+import { CorePage } from '../../utils'
 
-import styles from './home-page.css';
+import styles from './home-page.css'
 
 export class HomePage extends CorePage {
-  static get is() {
+  static get is () {
     return 'home-page'
   }
 
-  static get styles() {
+  static get styles () {
     return styles
   }
 
-  render() {
+  render () {
     return html`
       <main>
         <section>
-          <h1>${this.t("home-page.title")}</h1>
+          <h1>${this.t('home-page.title')}</h1>
         </section>
       </main>
-    `;
+    `
   }
 }
 
-customElements.define(HomePage.is, HomePage);
+customElements.define(HomePage.is, HomePage)
