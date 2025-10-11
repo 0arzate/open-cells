@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "name": "open-cells",
+  "description": "An application built using Cells framework by BBVA",
+  "license": "Apache-2.0",
+  "version": "0.1.1",
+  "type": "module",
+  "scripts": {
+    "dev": "npx concurrently \"npm run dev:css\" \"vite --port 3000\"",
+    "build": "npm run build:css && vite build",
+    "preview": "npm run build && vite preview",
+    "build:css": "node app/config/compile-scss.js",
+    "dev:css": "node app/config/compile-scss.js --watch"
+  },
+  "dependencies": {
+    "@open-cells/core": "1.1.0",
+    "@open-cells/element-controller": "1.0.2",
+    "@open-cells/localize": "1.1.1",
+    "@open-cells/page-controller": "1.0.2",
+    "@open-cells/page-mixin": "1.2.0",
+    "lit": "3.3.1",
+    "vite-plugin-static-copy": "2.3.2"
+  },
+  "devDependencies": {
+    "fs-extra": "11.3.2",
+    "sass": "1.93.2",
+    "standard": "17.1.2",
+    "vite": "5.4.20"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ],
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "ignorePatterns": [
+      "app/*.css.js"
+    ]
+  }
+}
