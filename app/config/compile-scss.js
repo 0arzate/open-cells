@@ -30,9 +30,9 @@ function compileScss (filePath = '') {
     const cssTemplate = getCSSTemplate(result)
 
     fs.writeFileSync(outputFilePath, cssTemplate, CHARSET)
-    console.log(`Archivo ${outputFilePath} compilado correctamente`)
+    console.log(`file ${outputFilePath} compiled successfully`)
   } catch (error) {
-    console.error(`Error compilando ${filePath}:`, error.message)
+    console.error(`compilation error ${filePath}:`, error.message)
   }
 }
 
@@ -42,7 +42,7 @@ function compileAllSCSS () {
 
   scssFiles.forEach(file => compileScss(path.join(inputDir, file)))
 
-  console.log('🎉 Compilación de scss completa.')
+  console.log('SCSS compilation complete.')
 }
 
 function watchChangesSCSSFiles (dir) {
@@ -55,7 +55,7 @@ function watchChangesSCSSFiles (dir) {
     }
   })
 
-  console.log(`👀 Escuchando cambios en ${dir}...`)
+  console.log(`listening changes in ${dir}...`)
 }
 
 if (isWatchMode) {
