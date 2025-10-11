@@ -24,6 +24,7 @@ export class SecondPage extends CorePage {
   render() {
     return html`
       <main slot="content">
+        ${this.renderHeader}
         <h1>${this.t("second-page.title")}</h1>
         <button @click="${() => this.navigate('home')}">
           ${this.t("second-page.button.text")}

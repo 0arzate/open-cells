@@ -8,9 +8,6 @@ import { LANGUAGES, LANGUAGES_LABELS, THEME_LABELS, THEMES } from "../../utils/c
 class appHeader extends LocalizeMixin(LitElement) {
   constructor() {
     super()
-
-    this.lang = ''
-    this.themeLabel = ''
   }
 
   static get is() {
@@ -22,36 +19,28 @@ class appHeader extends LocalizeMixin(LitElement) {
   }
 
   static get properties() {
-    return {
-      themeLabel: { type: String }
-    }
-  }
-
-  firstUpdated() {
-    this.lang = document.documentElement.lang
-    this.updateThemeLabel()
+    return {}
   }
 
   get langLabel() {
-    return LANGUAGES_LABELS[this.lang]
+    return LANGUAGES_LABELS[document.documentElement.lang]
   }
 
   toggleLang() {
-    const selectedLang = LANGUAGES[this.lang]
+    const selectedLang = LANGUAGES[document.documentElement.lang]
 
-    this.lang = selectedLang
     document.documentElement.lang = selectedLang
   }
 
-  toggleTheme() {
+  async toggleTheme() {
     document.documentElement.classList.toggle(THEMES.DARK_MODE)
-    this.updateThemeLabel()
+    await this.requestUpdate()
   }
 
-  updateThemeLabel() {
+  get themeLabel() {
     const isDarkMode = document.documentElement.classList.contains(THEMES.DARK_MODE)
     const theme = isDarkMode ? THEMES.DARK_MODE : THEMES.LIGHT_MODE
-    this.themeLabel = THEME_LABELS[theme]
+    return THEME_LABELS[theme]
   }
 
   render() {
