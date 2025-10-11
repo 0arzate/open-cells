@@ -4,7 +4,6 @@ const styles = css`
   :host {
     display: flex;
     flex-direction: column;
-    height: 100%;
     box-sizing: border-box;
   }
 
