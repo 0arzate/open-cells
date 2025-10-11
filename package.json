@@ -1,9 +1,9 @@
 {
   "private": true,
   "name": "open-cells",
-  "description": "An application built using Cells framework by BBVA",
+  "description": "Audiophile store build with Open Cells by BBVA",
   "license": "Apache-2.0",
-  "version": "0.1.1",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "npx concurrently \"npm run dev:css\" \"vite --port 3000\"",
