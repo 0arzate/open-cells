@@ -17,7 +17,7 @@ import {
 } from '@open-cells/localize'
 
 setUseBundles(true)
-setLocalesHost('./public/locales')
+setLocalesHost('./app/locales')
 setUrl('locales.json')
 
 requestResources()
