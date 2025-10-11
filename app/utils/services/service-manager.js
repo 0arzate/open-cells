@@ -1,4 +1,3 @@
-
 const SIMBOLS = Object.freeze({
   INITIAL_PARAMS: '?',
   NEXT_PARAM: '&',
@@ -6,16 +5,16 @@ const SIMBOLS = Object.freeze({
 })
 
 export class ServiceManager {
-  constructor(config = {}) {
-    this.config = config;
+  constructor (config = {}) {
+    this.config = config
   }
 
-  get params() {
-    const { params = {} } = this.config;
-    const paramsList = Object.entries(params);
-    const hasParams = paramsList.length > 0;
+  get params () {
+    const { params = {} } = this.config
+    const paramsList = Object.entries(params)
+    const hasParams = paramsList.length > 0
 
-    if (!hasParams) return '';
+    if (!hasParams) return ''
 
     const paramsConcat = paramsList.map(([key, value], position) => {
       const currentPosition = position + 1
@@ -30,14 +29,14 @@ export class ServiceManager {
     return paramsJoin
   }
 
-  async generateRequest(config = {}) {
+  async generateRequest (config = {}) {
     try {
-      const { host } = this.config;
-      const URL = `${host}${this.path}${this.params}`;
+      const { host } = this.config
+      const URL = `${host}${this.path}${this.params}`
       const response = await fetch(URL, config)
-      return response.json();
+      return response.json()
     } catch (error) {
-      throw new Error(error);
+      throw new Error(error)
     }
   }
 }

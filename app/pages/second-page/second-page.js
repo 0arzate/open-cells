@@ -1,37 +1,33 @@
-import { html } from 'lit';
+import { html } from 'lit'
 
-import { CorePage } from '../../utils';
+import { CorePage } from '../../utils'
 
-import styles from './second-page.css';
+import styles from './second-page.css'
 
 export class SecondPage extends CorePage {
-  constructor() {
-    super();
+  static get is () {
+    return 'second-page'
   }
 
-  static get is() {
-    return 'second-page';
+  static get properties () {
+    return {}
   }
 
-  static get properties() {
-    return {};
+  static get styles () {
+    return styles
   }
 
-  static get styles() {
-    return styles;
-  }
-
-  render() {
+  render () {
     return html`
       <main slot="content">
         ${this.renderHeader}
-        <h1>${this.t("second-page.title")}</h1>
+        <h1>${this.t('second-page.title')}</h1>
         <button @click="${() => this.navigate('home')}">
-          ${this.t("second-page.button.text")}
+          ${this.t('second-page.button.text')}
         </button>
       </main>
-    `;
+    `
   }
 }
 
-customElements.define(SecondPage.is, SecondPage);
+customElements.define(SecondPage.is, SecondPage)

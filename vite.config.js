@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite';
-import { viteStaticCopy } from 'vite-plugin-static-copy';
-import path from "path"
+import { defineConfig } from 'vite'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
+import path from 'path'
 
 export default defineConfig({
   build: {
@@ -14,10 +14,10 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: path.resolve(__dirname, 'public/locales') + '/[!.]*',
-          dest: 'public/locales'
+          src: path.resolve(__dirname, 'app/locales') + '/[!.]*',
+          dest: 'app/locales'
         }
       ]
     })
   ]
-});
+})

@@ -25,6 +25,6 @@ const styles = css`
   main ::slotted([state="active"]) {
     visibility: visible;
   }
-  `;
+`;
 
 export default styles;

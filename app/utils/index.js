@@ -1,2 +1,2 @@
-export * from './core-page';
-export * from './services/service-manager';
+export * from './core-page'
+export * from './services/service-manager'
