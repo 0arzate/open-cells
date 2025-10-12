@@ -1,8 +1,10 @@
 import { LANGUAGES, THEMES } from './constants'
 
 export function toggleLanguage () {
-  const selectedLang = LANGUAGES[document.documentElement.lang]
-  document.documentElement.lang = selectedLang
+  const currentLang = document.documentElement.lang
+  const changedLang = LANGUAGES[currentLang]
+
+  document.documentElement.lang = changedLang
 }
 
 export function toggleDarkMode () {
