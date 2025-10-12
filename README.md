@@ -5,5 +5,5 @@ This is a template for building web applications using BBVA's [Cells](https://ww
 
 ## Authors
 
-- [@0Arzate](https://github.com/0arzate)
+- [@0Arzate](www.linkedin.com/in/osvaldoarzate1a7a8b1ab)
 
