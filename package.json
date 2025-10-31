@@ -10,8 +10,7 @@
     "build": "npm run build:css && vite build",
     "preview": "npm run build && vite preview",
     "build:css": "node app/config/compile-scss.js",
-    "dev:css": "node app/config/compile-scss.js --watch",
-    "test": "nyc node --experimental-vm-modules ./node_modules/.bin/mocha 'test/**/*.test.js'"
+    "dev:css": "node app/config/compile-scss.js --watch"
   },
   "dependencies": {
     "@open-cells/core": "1.1.0",
@@ -19,14 +18,11 @@
     "@open-cells/localize": "1.1.1",
     "@open-cells/page-controller": "1.0.2",
     "@open-cells/page-mixin": "1.2.0",
-    "chai": "6.2.0",
     "lit": "3.3.1",
-    "mocha": "11.7.4",
     "vite-plugin-static-copy": "2.3.2"
   },
   "devDependencies": {
     "fs-extra": "11.3.2",
-    "nyc": "17.1.0",
     "sass": "1.93.2",
     "standard": "17.1.2",
     "vite": "5.4.20"
