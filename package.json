@@ -10,7 +10,8 @@
     "build": "npm run build:css && vite build",
     "preview": "npm run build && vite preview",
     "build:css": "node app/config/compile-scss.js",
-    "dev:css": "node app/config/compile-scss.js --watch"
+    "dev:css": "node app/config/compile-scss.js --watch",
+    "test": "web-test-runner --config ./web-test-runner.config.js --coverage"
   },
   "dependencies": {
     "@open-cells/core": "1.1.0",
@@ -22,6 +23,9 @@
     "vite-plugin-static-copy": "2.3.2"
   },
   "devDependencies": {
+    "@open-wc/testing": "4.0.0",
+    "@web/test-runner": "0.20.2",
+    "chai": "6.2.0",
     "fs-extra": "11.3.2",
     "sass": "1.93.2",
     "standard": "17.1.2",
@@ -33,10 +37,15 @@
     ],
     "env": {
       "browser": true,
-      "es2021": true
+      "es6": true,
+      "node": true,
+      "mocha": true
     },
     "ignorePatterns": [
       "app/*.css.js"
-    ]
+    ],
+    "rules": {
+      "no-unused-vars": "off"
+    }
   }
 }
